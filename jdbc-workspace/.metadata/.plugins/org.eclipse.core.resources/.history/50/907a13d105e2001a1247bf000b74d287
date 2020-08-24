@@ -1,0 +1,13 @@
+package step1;
+
+public class Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println(2%6);
+		
+		int total_page = 754 / 10+ (754 % 10>0 ? 1 : 0);
+		System.out.println(total_page);
+	}
+
+}

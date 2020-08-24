@@ -1,0 +1,88 @@
+package step1;
+
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class TestPaging {
+
+	public void selectCount() {
+		ArrayList<NoticVO> list = null;
+		int rowCount = 0; // 총 로우
+		int startPage = 0;
+		int endPage = 0;
+		int rowSize = 10; // 로우 10줄
+		int pageSize = 5; // 페이지 5
+		try {
+			NoticDAO dao = new NoticDAO();
+			list = dao.noticeSelectAll();
+			rowCount = list.size();
+			endPage = Math.ceil((double)rowCount / rowSize);
+
+			System.out.println("총 게시물 수 : " + rowCount);
+			System.out.println("총 페이지 수 : " + endPage);
+			// for (int i = 0; i < list.size(); i++) { System.out.println(list.get(i)); }
+			for (int i = startPage; i <= endPage; i++) {
+				System.out.print(i + "페이지 \t");
+			}
+			execute();
+
+		} catch (Exception e) {
+			System.out.println("에러발생");
+			e.printStackTrace();
+		}
+	}
+
+	public void execute() {
+		Scanner sc = new Scanner(System.in);
+		try {
+			NoticDAO dao = new NoticDAO();
+			ArrayList<NoticVO> list = null;
+			exit: while (true) {
+				String point = sc.nextLine();
+				switch (point) {
+				case "1":
+					String currentPage = sc.nextLine();
+					list = dao.noticeSelcetPage(Integer.parseInt(currentPage));
+					for (NoticVO vo1 : list) {
+						System.out.println(vo1);
+					}
+					break;
+
+				default:
+					sc.close();
+					break exit;
+				}
+			}
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (NumberFormatException e) {
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+	public void insert() {
+		try {
+			NoticDAO dao = new NoticDAO();
+			for (int i = 0; i < 100; i++) {
+				Thread.sleep(1000);
+				dao.noticInsert(new NoticVO("타이틀" + i, "내용" + i, 0));
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public static void main(String[] args) {
+		new TestPaging().selectCount();
+		//new TestPaging().insert();
+		//System.out.println("끝");
+		//int startNum = (2 - 1) * 10 + 1;
+
+	}
+
+}

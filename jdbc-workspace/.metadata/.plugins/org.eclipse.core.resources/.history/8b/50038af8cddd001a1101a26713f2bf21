@@ -1,0 +1,9 @@
+package model;
+
+public class EmployeeDTO {
+	private String empno;
+	private String ename;
+	private int sal;
+	private String tel;
+	private DepartmentDTO departmentDTO; //has a, aggregation
+}

@@ -1,0 +1,13 @@
+package model;
+
+public class DepartmentDTO {
+	private String depntno;
+	private String dname;
+	private String loc;
+	private String tel;
+
+	public DepartmentDTO() {
+		super();
+	}
+
+}

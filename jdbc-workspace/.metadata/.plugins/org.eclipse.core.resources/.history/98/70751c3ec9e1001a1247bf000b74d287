@@ -1,0 +1,104 @@
+package step1;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+
+import common.Info;
+
+public class NoticDAO {
+
+	public NoticDAO() throws ClassNotFoundException {
+		Class.forName(Info.DRIVER);
+	}
+
+	private Connection getConnection() throws SQLException {
+		return DriverManager.getConnection(Info.URL, Info.ID, Info.PASSWORD);
+	}
+
+	private void closeAll(Connection con, PreparedStatement pstmt, ResultSet rs) throws SQLException {
+		if (rs != null)
+			rs.close();
+		if (pstmt != null)
+			pstmt.close();
+		if (con != null)
+			con.close();
+
+	}
+
+	public void noticInsert(NoticVO vo) throws Exception {
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		try {
+			con = getConnection();
+			con.setAutoCommit(false);
+
+			StringBuilder sb = new StringBuilder();
+			sb.append("INSERT INTO NOTICE(no,title,content,point)");
+			sb.append(" VALUES(NOTICE_SEQ.NEXTVAL,?,?,?)");
+			pstmt = con.prepareStatement(sb.toString());
+			pstmt.setString(1, vo.getTitle());
+			pstmt.setString(2, vo.getContent());
+			pstmt.setInt(3, vo.getPoint());
+			pstmt.executeUpdate();
+			con.commit();
+		} catch (Exception e) {
+			con.rollback();
+			throw e;
+		} finally {
+			closeAll(con, pstmt, null);
+		}
+	}
+
+	public ArrayList<NoticVO> noticeSelectAll() throws SQLException {
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		ArrayList<NoticVO> list = new ArrayList<NoticVO>();
+		NoticVO vo = null;
+		try {
+			con = getConnection();
+			String sql = "SELECT NO,TITLE,CONTENT,POINT FROM NOTICE";
+			pstmt = con.prepareStatement(sql);
+			rs = pstmt.executeQuery();
+			while(rs.next()){
+				vo = new NoticVO();
+				vo.setNo(rs.getInt("NO"));
+				vo.setTitle(rs.getString("TITLE"));
+				vo.setContent(rs.getString("CONTENT"));
+				vo.setPoint(rs.getInt("POINT"));
+				list.add(vo);
+			}
+		
+		}finally {
+			closeAll(con, pstmt, rs);
+		}
+		return list;
+	}
+	
+	public ArrayList<NoticVO> noticeSelcetPage(int currentPage) throws SQLException{
+		ArrayList<NoticVO> list = new ArrayList<NoticVO>();
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		int startNum =  (currentPage- 1) * 10 + 1;
+		int endNum = currentPage * 10;
+		try {
+			con = getConnection();
+			StringBuilder sb = new StringBuilder();
+			sb.append("SELECT ROWNUM,NO,TITLE,CONTENT,POINT");
+			sb.append(" FORM NOTICE");
+			sb.append(" WHERE ROWNUM BETWEEN ? AND ?");
+			pstmt = con.prepareStatement(sb.toString());
+			pstmt.setInt(1, startNum);
+			pstmt.setInt(2, endNum);
+			pstmt.executeQuery();
+		}finally {
+			closeAll(con, pstmt, rs);
+		}
+		return list;
+	}
+}

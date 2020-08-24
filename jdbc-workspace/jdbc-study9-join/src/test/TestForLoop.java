@@ -1,0 +1,24 @@
+package test;
+
+import java.util.ArrayList;
+
+import model.Person;
+
+public class TestForLoop {
+
+	public static void main(String[] args) {
+		ArrayList<Person> list = new ArrayList<Person>();
+		list.add(new Person("홍길동", 500));
+		list.add(new Person("정세희", 1500));
+		list.add(new Person("손오공", 700));
+		//for 기존
+		for(int i=0;i<list.size();i++) {
+			System.out.println(list.get(i).getName()+ " , "+list.get(i).getMoney());
+		}
+		//for loop
+		for(Person p : list) {
+			System.out.println(p.getName() + " , " + p.getMoney());
+		}
+	}
+
+}

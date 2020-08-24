@@ -1,0 +1,14 @@
+package test;
+
+import java.util.ArrayList;
+
+import model.Person;
+
+public class TestForLoop {
+
+	public static void main(String[] args) {
+		ArrayList<Person> list = new ArrayList<Person>();
+		list.add(new Person("ȫ�浿", 500))
+	}
+
+}

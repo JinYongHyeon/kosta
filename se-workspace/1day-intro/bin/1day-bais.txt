@@ -1,0 +1,72 @@
+** java se 1일차 수업 **
+1. JDK 설치 / 환경설정
+2. Eclipse 설치 및 환경설정
+3. java se 목차
+4. java basic
+ 	-컴파일과 실행
+ 	-jdk > jre > jvm
+ 	
+ -------------------------
+ 
+ -jdk 다운로드 링크	
+ https://www.oracle.com/java/technologies/javase-downloads.html	
+ -jdk 환결설정 : 시스템  고급시스템 설정 -> 환경변수 -> 시스템변수-Path(C:\Program Files\Java\jdk1.8.0_251\bin) 경로추가
+ 위와 같이 경로를 설정하면 윈도우 실행창에서 자바프로그램을 컴파일하고 실행할 수 있다.
+ 
+ Ecelipse IDE(통합개발툴) 설치 
+ https://www.eclipse.org/downloads/packages/ (Eclipse IDE for Enterprise Java Developers) 다운
+ 
+ Eclipse Font 변경
+ Window -> perferences -> font 로 검색 후  -> color and font - baisc -> text font 를 변경한다.
+ 
+java se 목차
+ -Java SE 환경설정 및 개발툴 설치
+ -OOP(Object-Oriented Programming) 개념
+ -Java 기본문법 (클래스, 변수, 메서드, 생성자)
+ -OOP 주요개념 중 Encapsualtion
+ -제어문(조건문, 반복문)
+ -배열(Array)
+ -OOP 주요개념 중 상속(Inheritance)
+ -OOP 주요개념 중 다형성(Polymorphism)
+ -static, final, abstract
+ -Interface
+ -Collection(Set, List, Map, Stack ,Queue)
+ -Exception
+ -IO
+ -Thread
+ -Network
+ 
+ java basic 
+  -컴파일과 실행
+   	컴파일(compile) : 기계어로 구성된 class 파일을 생성 
+   	자바 컴파일 명령어 javac 파일명 ex)javac Hello.java -> 컴파일 하면 Hello.class 생성
+   	이클립스 저장하면 자동 컴파일
+   	
+   	실행(runtime) : java program 을 실행
+   	java 클래스명 ex)java HelloWorld
+   	
+  -jdk > jre > jvm
+   JDK(Java Development Kit : 자바 개발 도구)
+   JRE(Java RunTime Environment : 자바 실행 환경)
+   JVM(Java Virtual Machine : 자바가상기계) -> OS와 Java Program 사이에서 통역 역할 생성 된 Class(기계어) 파일을 번역하여 실행
+   
+
+**자기소개**
+이름 -> 사는곳 -> 좋아하는 것 -> 자신의 장점 -> 살면서 인상적이었던 일 -> 이 곳에 오게 된 사연 -> 유머하나??
+
+진용현 경기도 용인 게임 하나의 목표가 꽂히면 그 목표를 이룰려고 노력한다
+
+
+**2일차 주요목차**
+ -객체지향개념
+ -객체 Obejct
+ -클래스 Class
+ -변수 variable
+ -메서드 method
+ -접근제어자 access modifier - public , private
+ -Encapsulation(캡슐화)
+ -UML -> class diagram
+ 
+ tip) 다른 자바 프로젝트 import 하는 방법
+  -Project Explorer 에서 마우스 오른쪽 -> import -> import -> Exixting Project into Workspace -> next -> 
+   Browse 탭 누른 후 해당 프로젝트를 선택 이 떄 주의할 점은 아래 체크박스 중 Copy projects into workspace 를 체크한 후 finsh 

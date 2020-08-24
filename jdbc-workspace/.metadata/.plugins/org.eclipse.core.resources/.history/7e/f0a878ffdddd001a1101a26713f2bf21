@@ -1,0 +1,16 @@
+package test;
+
+import java.util.ArrayList;
+
+import model.Person;
+
+public class TestForLoop {
+
+	public static void main(String[] args) {
+		ArrayList<Person> list = new ArrayList<Person>();
+		list.add(new Person("È«±æµ¿", 500));
+		list.add(new Person("Á¤¼¼Èñ", 1500));
+		list.add(new Person("¼Õ¿À°ø", 700));
+	}
+
+}

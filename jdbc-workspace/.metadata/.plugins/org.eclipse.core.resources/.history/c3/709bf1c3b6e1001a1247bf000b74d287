@@ -1,0 +1,8 @@
+package common;
+
+public interface Info {
+	//public static final
+	String DRIVER ="oracle.jdbc.OracleDriver";
+	String ID="scott";
+	String PASSWORD ="tiger";
+}

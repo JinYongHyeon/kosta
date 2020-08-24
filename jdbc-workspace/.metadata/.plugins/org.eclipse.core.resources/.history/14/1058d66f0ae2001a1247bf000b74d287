@@ -1,0 +1,58 @@
+package step1;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class TestPaging {
+
+	public void selectCount() {
+		
+		try {
+			NoticDAO dao = new NoticDAO();
+			ArrayList<NoticVO> list = dao.noticeSelectAll();
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	public void execute() {
+		Scanner sc = new Scanner(System.in);
+		while(true) {
+			String paginNumber = sc.nextLine();
+			
+			switch (paginNumber) {
+			
+			case "1":
+				
+				break;
+
+			default:
+				break;
+			}
+		}
+
+	}
+
+	public void insert() {
+		try {
+			NoticDAO dao = new NoticDAO();
+			for (int i = 0; i < 100; i++) {
+				Thread.sleep(1000);
+				dao.noticInsert(new NoticVO("타이틀" + i, "내용" + i, 0));
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public static void main(String[] args) {
+		new TestPaging().execute();
+		//new TestPaging().insert();
+		//System.out.println("끝");
+		//int startNum = (2 - 1) * 10 + 1;
+
+	}
+
+}

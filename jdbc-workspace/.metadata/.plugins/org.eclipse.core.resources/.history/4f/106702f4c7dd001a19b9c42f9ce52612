@@ -1,0 +1,9 @@
+package test;
+
+public class testJoin {
+
+	public static void main(String[] args) {
+		EmployeeDAO dao = new EmployeeDAO(); // VO = Value Object로 사용 가능
+	}
+
+}

@@ -1,0 +1,22 @@
+{
+  "company": "tistory",
+  "address": "seoul",
+  "number": "0212345678",
+  "newEmployees": [
+    {
+      "name": "kim",
+      "age": "29",
+      "isNew": true
+    },
+    {
+      "name": "park",
+      "age": "27",
+      "isNew": true
+    },
+    {
+      "name": "lee",
+      "age": "26",
+      "isNew": true
+    }
+  ]
+}

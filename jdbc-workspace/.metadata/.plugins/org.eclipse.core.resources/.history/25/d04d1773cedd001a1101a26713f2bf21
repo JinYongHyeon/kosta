@@ -1,0 +1,20 @@
+package test;
+
+import model.EmployeeDAO;
+
+public class testJoin {
+
+	public static void main(String[] args) {
+		EmployeeDAO dao = new EmployeeDAO(); 
+		/*
+		 * k_employee 와 department 테이블을 조합(결합)해서
+		 * 1번 사원번호를 가진 사원의 사원정보와 부서정보를 조회하고자 한다.
+		 * (이 형태는 빈번하게 사용되고, 때로는 사원정보만 조회해서 화면 제공하고 때로는 부서정보만 조회해서 화면이 제공되기도 한다.)
+		 * ->UML(Class Diagram)을 정의해보자.
+		 */
+		String empno="1";
+		//empno에 해당하는 ename,sal,deptno,dname,loc,tel을  조회하여 출력
+		dao.findEmpAndDeptInfo(empno); //join sql 실행해서 결과를 반환
+	}
+
+}

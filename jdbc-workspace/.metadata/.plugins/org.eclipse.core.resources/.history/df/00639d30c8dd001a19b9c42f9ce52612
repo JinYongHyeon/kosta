@@ -1,0 +1,16 @@
+package test;
+
+import model.EmployeeDAO;
+
+public class testJoin {
+
+	public static void main(String[] args) {
+		EmployeeDAO dao = new EmployeeDAO(); // VO = Value Object로 사용 가능
+		/*
+		 * k_employee 와 department 테이블을 조합(결합)해서
+		 * 1번 사원번호를 가진 사원의 사원정보와 부서정보를 조회하고자 한다.
+		 * ->UML(Class Diagram)을 정의해보자.
+		 */
+	}
+
+}

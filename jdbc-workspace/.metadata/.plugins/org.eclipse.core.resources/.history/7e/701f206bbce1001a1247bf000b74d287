@@ -1,0 +1,62 @@
+package step1;
+
+public class NoticVO {
+	private int no;
+	private String title;
+	private String content;
+	private int point;
+	
+	
+	public NoticVO() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public NoticVO(String title, String content, int point) {
+		super();
+		this.title = title;
+		this.content = content;
+		this.point = point;
+	}
+
+	public NoticVO(int no, String title, String content, int point) {
+		super();
+		this.no = no;
+		this.title = title;
+		this.content = content;
+		this.point = point;
+	}
+
+	public int getNo() {
+		return no;
+	}
+
+	public void setNo(int no) {
+		this.no = no;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public String getContent() {
+		return content;
+	}
+
+	public void setContent(String content) {
+		this.content = content;
+	}
+
+	public int getPoint() {
+		return point;
+	}
+
+	public void setPoint(int point) {
+		this.point = point;
+	}
+
+}

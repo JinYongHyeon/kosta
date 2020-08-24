@@ -1,0 +1,6 @@
+package common;
+
+public interface Info {
+	//public static final
+	String DRIVER ="";
+}

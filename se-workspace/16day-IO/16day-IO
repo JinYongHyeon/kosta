@@ -1,0 +1,24 @@
+****16일차 주요목차****
+-String/StringBuilder/StringBuffer
+
+ String : 변하지 않는다 - literal pool(문자열상숭영역)에 저장하고 공유해서 사용, 문자열을 수정하면 새로운 문자열을 만든다.
+ StringBuilder,  StringBuffer  : 변경시  문자열 자체가 변경된다.
+ StrubgBuilder(동기화처리하지 않음) 와 StringBuffer(동기화처리되어 있음) 의 차이점은 동기화 처리 여부다 ( thread - safe)
+ thread에서 동과 공부할 예정
+ 
+ -IO (입출력)
+ 4가지 abstract super class(추상 부모 클래스)
+ 			       입력			    출력
+ 1byte 단위     InputStream   OutputStream
+ 2byte 단위          Reader         Writer
+
+스트림(Stream) : 입출력을 위한 자바 클래스를 의미 사전적 의미는 연손적 데이터 흐름, 액체, 기체의 줄기
+
+-NodeStream 계열 : 장치에 연결되는 스트림(장치 == 파일 || 네트워크)
+-ProcessingStream 계열  : 다양한 기능을 지원하는 스트림
+ 
+
+
+**17day 주요목차**
+-IO : 객체 직렬화 (Object Serialization)
+-Thread
