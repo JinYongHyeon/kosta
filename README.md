@@ -3,7 +3,7 @@
 <ul>
   <li>1.Java SE WorkSpace</li>
   <li>2.Java(JDBC) WorkSpace</li>
-  <li>20년09월03일 공부일지
+  <li>20년09월03일 수업일지
   	<ol>
   		<li>회원가입
   			<ol>
@@ -15,8 +15,36 @@
   		후 전송을 통해 DB작업이 정상적으로 끝났을 때   session을 불러와 user에 담겨있는 정보를 재활당을 해준다.
   		</li>
   	</ol>
-  			
-  		
   </li>
-  
+ <li>20년09월04일 수업일지
+ 	<ol>
+ 		<li>DataBase DATE연산
+ 			<ol>
+ 				<li>DATE타입은 데이터베이스 시간(년,월,일,시,분,초)을 관리하는 타입</li>
+ 				<li>sysdate 키워드 : 현재 시간을 표현하는 키워드</li>
+ 				<li>주요 함수 <ol>
+ 					<li>TO_CHAR() : 데이터베이스에 저장된 DATE형의 정보를 문자열로 반환받을 때 사용<br>
+ 					사용법 : TO_CHAR(SYSDATE,'YYYY/MM/DD HH24:MI:SS') == 년,월,일 시,분,초
+ 					 </li>
+ 					<li>TO_DATE() : 문자타입의 시간 정보를 데이터베이스의 DATE형으로 변환해 저장할 때 사용 <br>
+ 					※웹 어플리케이션에서 시간 정보를 전달받아 DB에 저장하기 위해 주로 사용 <-- EX)생년월일※<br>
+ 					사용법 : TO_DATE('1989.1.7 5:20:33','YYYY.MM.DD HH24:MI:SS') == 년,월,일,시,분,초
+ 					</li>
+ 				</ol></li>
+ 				<li>데이터 타입으로 연산도 가능 : SELECT ID,MYDATE ,MYDATE-1 AS 하루전 FROM DATA_TEST;</li>
+ 				<li>TRUNC() : 소수점 이하는 버릴 때 쓰는 함수 </li>
+ 				<li>MONTHS_BETWEEN(현재시간,등록시간) : ~개월차이 볼 떄 쓰는 함수</li> 				
+ 			</ol>
+ 		</li>
+ 		<li>DATE연산자를 이용한 Servlet&JSP
+ 			<ol>
+ 				<li>상품등록 : 상품 아이디(시퀀스)처리,상품 등록일(SYSDATE), 상품등록폼에서 이름,제조사,가격 입력 후 DAO에서 처리작업</li>
+ 				<li>상품 전체리스트 : 상품 전체리스트 링크를 클릭시 DAO에서 SELECT 후 Collection계열인 ArrayList<VO> 리턴 값을 받아
+ 					상품 전체리스트 폼에 뿌려준다.
+ 				</li>
+ 				<li>상품 상세리스트 : 상품 전체리스트폼에서 상품이름을 클릭시 링크를 통해 id값을 저장해 DAO전달하여 SELECT 에서 ID PRIMARY KEY 을 찾아서 있을경우 상품 상세리스트폼에 뿌려주고 존재하지 않을경우 alert알림을 통해 존재하지 않는 알림 후 index.jsp페이지로 이동시킨다.</li>
+ 			</ol>
+ 		</li>
+ 	</ol>
+ </li> 
 </ul>
