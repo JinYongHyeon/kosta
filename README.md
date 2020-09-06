@@ -4,6 +4,7 @@
   <li>1.Java SE WorkSpace</li>
   <li>2.Java(JDBC) WorkSpace</li>
   <li>20년09월03일 수업일지
+    <hr>
   	<ol>
   		<li>회원가입
   			<ol>
@@ -17,6 +18,7 @@
   	</ol>
   </li>
  <li>20년09월04일 수업일지
+   <hr>
  	<ol>
  		<li>DataBase DATE연산
  			<ol>
