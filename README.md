@@ -3,7 +3,7 @@
 <ul>
   <li>1.Java SE WorkSpace</li>
   <li>2.Java(JDBC) WorkSpace</li>
-  <li>3.코딩테스트 공부</li>
+  <li><a href="https://github.com/JinYongHyeon/kosta/tree/master/%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8">3.코딩테스트 공부</a></li>
   <li>20년09월03일 수업일지
     <hr>
   	<ol>
