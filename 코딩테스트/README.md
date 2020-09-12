@@ -22,4 +22,12 @@
   		<li><a href="https://github.com/JinYongHyeon/kosta/blob/master/%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8/source/WorkoutClothes.java">체육복</a></li>
   </ol>
   </li>
+  <li>20년09월12일
+  	<hr>
+  	<ol>
+  		<li><a href="https://github.com/JinYongHyeon/kosta/blob/master/%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8/source/KakaoSecretMap.java"[1차]>비밀지도</a></li>
+  		<li><a href="https://github.com/JinYongHyeon/kosta/blob/master/%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8/source/KakaoBlandSingup.java">KAKAO BLAND[ID검수]</a></li>
+  		<li><a href="https://github.com/JinYongHyeon/kosta/blob/master/%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8/source/Day.java">2016년</a></li>
+  	</ol>
+  </li>
 </ul>
