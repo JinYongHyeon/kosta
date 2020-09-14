@@ -66,11 +66,7 @@
 	</ol>
 </li>
 
-
-
-
-
- 	<li>반응형 웹(Media Query) : 다양한 기기(모바일, 태블릿,pc)에 최적화된 화면을 제공하는 것을 말함.
+<li>반응형 웹(Media Query) : 다양한 기기(모바일, 태블릿,pc)에 최적화된 화면을 제공하는 것을 말함.
  		<ol>
  			<li>HTML5, CSS3에 의해 지원되는 미디어 쿼리는 반응형 웹의 핵심기술이다.</li>
  			<li>미디어쿼리는 화면의 종류와 크기에 따라 디자인을 달리 주는 CSS 기술.</li>
@@ -78,7 +74,7 @@
  		</ol>
  	</li>
  	
- 	<li>Bootstrap : 반응형 웹 사이트를 개발하기 위한 HTML,CSS,JAVASCRIPT 프레임워크.
+<li>Bootstrap : 반응형 웹 사이트를 개발하기 위한 HTML,CSS,JAVASCRIPT 프레임워크.
  		<ol>
  			<li>Bootstrap 그리드 시스템을 사용 할때 모든 행은 반드시 .container(고정너비) or .container-fluid(전체너비) 안에 정의해야한다.</li>
  			<li>grid column 공간이 12이다.</li>
