@@ -50,4 +50,43 @@
  		</li>
  	</ol>
  </li> 
+ <li>20년09월14일 수업일지
+ <hr>
+ <ol>
+ 	<li>DBCP(DataBase Connection Pool) : 데이터베이스 연동시 컨넥션을 생성하고 소멸시키는 것이 아니라 미리 생성한 컨넥션을 빌려고오고
+반납받는 형식으로 시스템 성능 향상을 위해 사용.(DBCP WAS ex) tomcat 제공하는 dbcp 생성)
+	<ol>
+		<li>import javax.sql.DataSource(interface) : 타입으로 DBCP를 관리한다.<br>인터페이스 관리하는 이유 :  WAS가 변경되면 dbcp도 변경될 수 있으므로 추상화된 인터페이스 타입으로 관리하는 것이유지보수에 유리하다.
+		</li>
+		<li>
+		setInitialSize(3) : //처음 로드될 때 생성해 놓을 컨넥션 수 <-- 예상인원을 생각해서 미리 만들어놈<br>
+		setMaxTotal(10);//최대 컨넥션 수 : defualt 8 , Synchronized을 이용해 단일 스레드 변경하고 컨넥션 연결이 Full경우 wait()을 걸어
+		컨넥션을 반납할 때까지 대기 시킨다.
+		</li>
+	</ol>
+</li>
+
+
+
+
+
+ 	<li>반응형 웹(Media Query) : 다양한 기기(모바일, 태블릿,pc)에 최적화된 화면을 제공하는 것을 말함.
+ 		<ol>
+ 			<li>HTML5, CSS3에 의해 지원되는 미디어 쿼리는 반응형 웹의 핵심기술이다.</li>
+ 			<li>미디어쿼리는 화면의 종류와 크기에 따라 디자인을 달리 주는 CSS 기술.</li>
+ 			<li>미디어쿼리를 사용하기 위한 선언부 (뷰메타태그)  : [meta name="viewport" content="width=device-width, initial-scale=1] </li>
+ 		</ol>
+ 	</li>
+ 	
+ 	<li>Bootstrap : 반응형 웹 사이트를 개발하기 위한 HTML,CSS,JAVASCRIPT 프레임워크.
+ 		<ol>
+ 			<li>Bootstrap 그리드 시스템을 사용 할때 모든 행은 반드시 .container(고정너비) or .container-fluid(전체너비) 안에 정의해야한다.</li>
+ 			<li>grid column 공간이 12이다.</li>
+ 			<li> col-xs-*(768이하) 모바일 폰 / col-sm-*(768이상) 태블릿 / col-md-*(992이상) 중간기기 데스크탑 / col-lg-*(1200이상) 큰기기 데스크탑</li>
+  			<li>offset : 사용하면 * 열만큼 오른쪽으로 이동한다. ex) div class = col-sm-5 / div class = col-sm-5 col-sm-offset-2(첫번째 div가 5칸을 차지하고 두번재 div에서 offset 사용하여 2칸 뛰고 5칸을 차지한다. </li>
+ 		</ol>
+ 	</li>
+ </ol>
+ </li>
 </ul>
+
