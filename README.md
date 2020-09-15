@@ -88,5 +88,24 @@
  	</li>
  </ol>
  </li>
+ <li>20년09월15일 수업일지<hr>
+ 	<ol>
+ 		<li>jsp:Action Tag<ol>
+ 			<li>jsp:forward : 요청을 다른 자원을 전달(forward방식) -- 바로 db 들려야 할때 사용</li>
+ 			<li>jsp:include : header 나 footer 같은 고정적으로 만들어서 사용할 때 사용</li>
+ 		</ol>
+ 		</li>
+ 			
+ 		<li>UML : UseCaseDiagram
+ 			<ol>
+ 				<li>Use Case : 사용자 관점의 기능단위(서비스단위)</li>
+ 				<li>Actor : 시스템 외부에 존재하면서 시스템과 상호작용하는 개체</li>
+ 				<li>include : 기본 유즈케이스가 실행되기 위해서는 반드시 다른 특정 유즈케이스의 행위를 포함해야 한다는 것을 의미</li>
+ 				<li>extends유즈케이스가 특정 유즈케이스에 정의된 행위로 선택적으로 추가 확장될 수 있다는 것을 나타낸다. </li>
+ 				<li>Generalization(일반화) : 기능의 추가 관계 아님. 개념의 확대로 봐야 함</li>
+ 			</ol>
+ 		</li>
+ 	</ol>
+ </li>
 </ul>
 
