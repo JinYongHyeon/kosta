@@ -78,6 +78,10 @@
  		<ol>
  			<li>Bootstrap 그리드 시스템을 사용 할때 모든 행은 반드시 .container(고정너비) or .container-fluid(전체너비) 안에 정의해야한다.</li>
  			<li>grid column 공간이 12이다.</li>
+ 			<li>col-*-* 클래스를 사용할 때 row class 안에 넣어야 한다. 이유는 row는 수평의 컬럼 모음을 만드길 위해서이다.
+ 				그냥 row class를 안쓰고 div안에 했을 때는 수평이 유지가 안됨 --> 확대를 했을 때 깨짐 row를 적용하면 확대를 할 때
+ 				안깨짐 
+ 			</li>
  			<li> col-xs-*(768이하) 모바일 폰 / col-sm-*(768이상) 태블릿 / col-md-*(992이상) 중간기기 데스크탑 / col-lg-*(1200이상) 큰기기 데스크탑</li>
   			<li>offset : 사용하면 * 열만큼 오른쪽으로 이동한다. ex) div class = col-sm-5 / div class = col-sm-5 col-sm-offset-2(첫번째 div가 5칸을 차지하고 두번재 div에서 offset 사용하여 2칸 뛰고 5칸을 차지한다. </li>
  		</ol>
