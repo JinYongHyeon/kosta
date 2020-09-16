@@ -95,7 +95,6 @@
  			<li>jsp:include : header 나 footer 같은 고정적으로 만들어서 사용할 때 사용</li>
  		</ol>
  		</li>
- 			
  		<li>UML : UseCaseDiagram
  			<ol>
  				<li>Use Case : 사용자 관점의 기능단위(서비스단위)</li>
