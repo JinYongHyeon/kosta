@@ -107,5 +107,56 @@
  		</li>
  	</ol>
  </li>
+ <li>20년09월16일 수업일지<hr>
+ <ol>
+ 	<li>EL : JSP 버전이 상향되면서 추가된 스크립트 언어
+ 		<ol>
+ 			<li>기존 사용 방식 JSP 버전이 상향되면서 추가된 스크립트 언어 </li>
+ 			<li>EL 방식 ${requestScope.mvo.name} OR ${mvo.name} // requestScope 생략가능(내부적으로 탐색함)</li>
+ 			<li>EL 방식은 내부적으로 형변환을 해준다 EX)Integer.parseInt()</li>
+ 			<li>EL 방식을 이용하면 null일 경우 화면에 표현하지 않는다. --> 값은 null은 전달한다.[기존은 Null 화면에 뿌려줌]</li>
+ 		 <li>EL에서 Model에 접근 가능한 메서드는 get계열과 is계열 메서드만 가능 is계열 메서드는 리턴타입이 boolean일때 사용</li>
+			<li>${pageContext.request.contextPath } : /projcetName 뽑아옴 [웹컨텍스트 (or 웹프로젝트명)을 출력]
+			<li>JSP 내장객체 종류
+				<ol>
+					  <li>pageContext : 다른 내장객체를 생성하는 역할 // Context -- > 환경설정</li>
+					  <li>pageScope  : JSP가 서블릿으로 변환되었을 때 Servlet 객체 자신(this)</li>
+					  <li>requestScope : request 객체에 접근하기 위한 역할</li>
+					  <li>sessionScope : session 객체에 접근하기 위한 역할</li>
+					  <li>applicationScope : application 객체 (ServletContext 객체) 객체에 접근하기 위한 역할</li>
+					  <li>Scope 부분을 스킵을 할 경우 name이 동일 할 때 범위가 작은 것으로 사용한다. </li>
+				</ol>
+			</li>
+			<li>EL 파라미터 제어
+				<ol>
+					 <li>param : request.getParameter();</li>
+			 		 <li>paramValues : request.getParameterValues(); </li>
+			 		 <li>initParam : application.getInitParameter()</li>
+				</ol>
+			</li>
+ 		</ol>
+ 	 </li>
+ 	 <li>JSTL : JSP 표준라이브러리(JSP Standard Tag Library) JSP에서 자주 사용하는 기능(반복과 조건 , 데이터 표현등)을 
+미리 구현해 놓은 커스텀 태그 라이브러리 모음 JSTL은 EL(Expression Language)를 사용하여 표현한다.
+	<ol>
+		<li>jsp 선언부에 jstl을 사용하기 위한 taglib 를 명시한다. <%@ taglib prefix="	c" uri="http://java.sun.com/jsp/jstl/core" %></li>
+		<li> c:if (test): test 테스트 조건 가공되다</li>
+		<li> c:choose : if else 사용할 때 사용 / choose 안에 when과 otherwise 조건문으로 사용
+			<ol>
+				<li>c:when : if or else if 역할</li>
+				<li>c:otherwise else 역할</li>
+			</ol>
+		</li>
+		<li> c:forEach : JSTL for loop 
+			<ol>
+				<li> var : 요소를 저장할 변수</li>
+				<li> varStatus : index와 count 속성이 있다.</li>
+				<li>item : 대상 배열 또는 컬렉션 </li>
+			</ol>
+		</li>
+	</ol>
+</li>
+ </ol>
+ </li>
 </ul>
 
