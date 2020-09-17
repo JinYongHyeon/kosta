@@ -123,7 +123,7 @@
 					  <li>requestScope : request 객체에 접근하기 위한 역할</li>
 					  <li>sessionScope : session 객체에 접근하기 위한 역할</li>
 					  <li>applicationScope : application 객체 (ServletContext 객체) 객체에 접근하기 위한 역할</li>
-					  <li>Scope 부분을 스킵을 할 경우 name이 동일 할 때 범위가 작은 것으로 사용한다. </li>
+					  <li>Scope 부분을 스킵을 할 경우 name이 동일 할 때 유효범위가 작은 것으로 사용한다. (request>session>application[ServletContext]) </li>
 				</ol>
 			</li>
 			<li>EL 파라미터 제어
@@ -157,5 +157,24 @@
 </li>
  </ol>
  </li>
+<li>20년09월17일 수업일지<hr>
+<ol>
+
+<li>c:forEach : JSTL for loop
+	<ol>
+		<li>begin : 시작 </li>
+		<li>end : 끝</li>
+		<li>JSTL forEach로 map의 key와 value를 순차적으로 출력  : ${variable.key} : key값 ${variable.value} value값 </li>
+	</ol>
+</li>
+<li>c:set : Bean, Map등에 값을 설정을 하거나, 일반 변수를 생성해서 값을 할당 할 수 있습니다. </li>
+<li> jsp:include 와 c:import 차이<ol>
+	<li>jstl import를 이용해 다른 웹어플리케이션의 자원을 가져와 본다.</li>
+	<li>jsp:include는 자신의 웹어플리케이션 내의 자원만 가져올 수 있다.</li>
+<ol>
+</li>
+</ol>
+
+</li>
 </ul>
 
