@@ -49,7 +49,7 @@
  			</ol>
  		</li>
  	</ol>
- </li> 
+ </li>
  <li>20년09월14일 수업일지
  <hr>
  <ol>
@@ -73,14 +73,14 @@
  			<li>미디어쿼리를 사용하기 위한 선언부 (뷰메타태그)  : [meta name="viewport" content="width=device-width, initial-scale=1] </li>
  		</ol>
  	</li>
- 	
+
 <li>Bootstrap : 반응형 웹 사이트를 개발하기 위한 HTML,CSS,JAVASCRIPT 프레임워크.
  		<ol>
  			<li>Bootstrap 그리드 시스템을 사용 할때 모든 행은 반드시 .container(고정너비) or .container-fluid(전체너비) 안에 정의해야한다.</li>
  			<li>grid column 공간이 12이다.</li>
  			<li>col-*-* 클래스를 사용할 때 row class 안에 넣어야 한다. 이유는 row는 수평의 컬럼 모음을 만드길 위해서이다.
  				그냥 row class를 안쓰고 div안에 했을 때는 수평이 유지가 안됨 --> 확대를 했을 때 깨짐 row를 적용하면 확대를 할 때
- 				안깨짐 
+ 				안깨짐
  			</li>
  			<li> col-xs-*(768이하) 모바일 폰 / col-sm-*(768이상) 태블릿 / col-md-*(992이상) 중간기기 데스크탑 / col-lg-*(1200이상) 큰기기 데스크탑</li>
   			<li>offset : 사용하면 * 열만큼 오른쪽으로 이동한다. ex) div class = col-sm-5 / div class = col-sm-5 col-sm-offset-2(첫번째 div가 5칸을 차지하고 두번재 div에서 offset 사용하여 2칸 뛰고 5칸을 차지한다. </li>
@@ -135,7 +135,7 @@
 			</li>
  		</ol>
  	 </li>
- 	 <li>JSTL : JSP 표준라이브러리(JSP Standard Tag Library) JSP에서 자주 사용하는 기능(반복과 조건 , 데이터 표현등)을 
+ 	 <li>JSTL : JSP 표준라이브러리(JSP Standard Tag Library) JSP에서 자주 사용하는 기능(반복과 조건 , 데이터 표현등)을
 미리 구현해 놓은 커스텀 태그 라이브러리 모음 JSTL은 EL(Expression Language)를 사용하여 표현한다.
 	<ol>
 		<li>jsp 선언부에 jstl을 사용하기 위한 taglib 를 명시한다. <%@ taglib prefix="	c" uri="http://java.sun.com/jsp/jstl/core" %></li>
@@ -146,7 +146,7 @@
 				<li>c:otherwise else 역할</li>
 			</ol>
 		</li>
-		<li> c:forEach : JSTL for loop 
+		<li> c:forEach : JSTL for loop
 			<ol>
 				<li> var : 요소를 저장할 변수</li>
 				<li> varStatus : index와 count 속성이 있다.</li>
@@ -159,7 +159,6 @@
  </li>
 <li>20년09월17일 수업일지<hr>
 <ol>
-
 <li>c:forEach : JSTL for loop
 	<ol>
 		<li>begin : 시작 </li>
@@ -168,13 +167,31 @@
 	</ol>
 </li>
 <li>c:set : Bean, Map등에 값을 설정을 하거나, 일반 변수를 생성해서 값을 할당 할 수 있습니다. </li>
-<li> jsp:include 와 c:import 차이<ol>
+<li> jsp:include 와 c:import 차이
+<ol>
 	<li>jstl import를 이용해 다른 웹어플리케이션의 자원을 가져와 본다.</li>
 	<li>jsp:include는 자신의 웹어플리케이션 내의 자원만 가져올 수 있다.</li>
 <ol>
 </li>
 </ol>
+</li>
+<li>20년09월18일 수업일지<hr>
+	<ol>
+		<li>sessionScope
+			<ol>
+				<li>page 지시어에서 session 속성을 false 로 설정했을 경우에는 session 객체에 저장한 빈 객체를 사용할 수 없다.</li>
+				<li><%@ page session="false"%> 설정을 하면 JSP 페이지에서 session 내장 객체를 사용하지 않겠다는 의미가 되므로 session 내장 객체를 사용할 수 없고 따라서 sessionScope 도 사용할 수 없게 된다.</li>
+			</ol>
+		</li>
+		<li>경로 설정<ol>
+		<li>client  측에 도달되는 html, css, javascript는 / 를 명시할 경우 port 다음으로 정보를 찾게 된다.</li>
 
+<li>server 측에 실행되는 foward, include (or jstl import)는 /를 명시할 경우 자신의 웹컨텍스트(웹어플리케이션명) 다음에서 정보를 찾게 된다.</li>
+<li>
+html, javascript, css는 ${pageContext.request.contextPath}/를 명시해서 웹어플리케이션 아래에서 정보를 찾게 하면 된다.
+</li>
+</ol>
+	</li>
+	</ol>
 </li>
 </ul>
-
