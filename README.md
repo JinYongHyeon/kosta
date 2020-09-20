@@ -171,7 +171,7 @@
 <ol>
 	<li>jstl import를 이용해 다른 웹어플리케이션의 자원을 가져와 본다.</li>
 	<li>jsp:include는 자신의 웹어플리케이션 내의 자원만 가져올 수 있다.</li>
-<ol>
+</ol>
 </li>
 </ol>
 </li>

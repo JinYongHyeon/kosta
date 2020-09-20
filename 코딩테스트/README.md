@@ -37,9 +37,9 @@
   </li>
   <li>20년09월20일 코딩테스트 공부<hr>
   	<ol>
-  		<li><a href="https://github.com/JinYongHyeon/kosta/blob/master/%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8/source/NumberArray">나누어 떨어지는 숫자 배열</a></li>
-  		<li><a href="https://github.com/JinYongHyeon/kosta/blob/master/%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8/source/TextOrder">문자열 내 마음대로 정렬하기</a></li>
-  		<li><a href="https://github.com/JinYongHyeon/kosta/blob/master/%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8/source/TextComparison">문자열 내 p와 y의 개수</a></li>
+  		<li><a href="https://github.com/JinYongHyeon/kosta/blob/master/%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8/source/NumberArray.java">나누어 떨어지는 숫자 배열</a></li>
+  		<li><a href="https://github.com/JinYongHyeon/kosta/blob/master/%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8/source/TextOrder.java">문자열 내 마음대로 정렬하기</a></li>
+  		<li><a href="https://github.com/JinYongHyeon/kosta/blob/master/%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8/source/TextComparison.java">문자열 내 p와 y의 개수</a></li>
   	</ol>  	
   </li>
 </ul>
