@@ -45,6 +45,10 @@
   <li>20년09월21일 코딩테스트 공부<hr>
     <ol>
       <li><a href="https://github.com/JinYongHyeon/kosta/blob/master/%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8/source/TwoNumber.java">두 개 뽑아서 더하기</a></li>
+      <li><a href="https://github.com/JinYongHyeon/kosta/blob/master/%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8/source/TwoNumberSum.java">자릿수 더하기</a></li>
+      <li><a href="https://github.com/JinYongHyeon/kosta/blob/master/%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8/source/OrderByNumberDesc.java">정수 내림차순으로 배치하기</a></li>
+      <li><a href="https://github.com/JinYongHyeon/kosta/blob/master/%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8/source/SmallDelete.java">제일 작은 수 제거하기</a></li>
+      <li><a href="https://github.com/JinYongHyeon/kosta/blob/master/%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8/source/WeirdText.java">이상한 문자 만들기</a></li>
     </ol>
   </li>
 </ul>
