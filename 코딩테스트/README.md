@@ -42,4 +42,9 @@
   		<li><a href="https://github.com/JinYongHyeon/kosta/blob/master/%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8/source/TextComparison.java">문자열 내 p와 y의 개수</a></li>
   	</ol>  	
   </li>
+  <li>20년09월21일 코딩테스트 공부<hr>
+    <ol>
+      <li><a href="https://github.com/JinYongHyeon/kosta/blob/master/%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8/source/TwoNumber.java">두 개 뽑아서 더하기</a></li>
+    </ol>
+  </li>
 </ul>
