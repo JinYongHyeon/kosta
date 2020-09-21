@@ -194,4 +194,12 @@ html, javascript, css는 ${pageContext.request.contextPath}/를 명시해서 웹
 	</li>
 	</ol>
 </li>
+<li>20년09월21일 공부일지<hr>
+<ol>
+	<li>layout or login-layout.jsp : 템플릿을 만들어서 session을 통해 session이 존재하지 않을경우에는 layout으로 존재할 경우
+	login-layout으로 이동시켜 request.setAttribute으로 메인페이지  url을 설정을 하여 c:import 을 통해 메인페이지를 보여준다. 
+	</li>
+</ol>
+	
+</li>
 </ul>
