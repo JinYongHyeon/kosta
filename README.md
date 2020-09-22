@@ -194,12 +194,25 @@ html, javascript, css는 ${pageContext.request.contextPath}/를 명시해서 웹
 	</li>
 	</ol>
 </li>
-<li>20년09월21일 공부일지<hr>
+<li>20년09월21일 수업일지<hr>
 <ol>
 	<li>layout or login-layout.jsp : 템플릿을 만들어서 session을 통해 session이 존재하지 않을경우에는 layout으로 존재할 경우
 	login-layout으로 이동시켜 request.setAttribute으로 메인페이지  url을 설정을 하여 c:import 을 통해 메인페이지를 보여준다. 
 	</li>
 </ol>
-	
+</li>
+<li>20년09월22일 수업일지<hr>
+ <ol>
+ 	<li>장바구니 기능(세션)
+ 		<ol>
+ 			<li>ItemDetail.jsp(상세페에지) 에서 EL방식으로 로그인 세션 존재 할 경우 장바구니 버튼을 활성화를 시킨 후 자바스크립트를 이용하여 confirm을 이벤트를 동작하여 true일 경우에 CartAddController로 상품번호와 같이 쿼리스트링 방식으로 보낸다.</li>
+ 			<li>CartAddController에서 장바구니 기능을 쓸 Collection중에 Map을 이용하여 session 장바구니에 저장을 한다.
+ 			session 장바구니에 처음으로 시작 되는경우 존재하지 않아 Map과 session 장바구니 2개다 생성을 하고 그 이후로는 session 장바구니에 기존 데이터를 Map에다가 값을 넣어준 다음 중복된 상품 유무를 체크 후 중복이 아닐 경우
+ 			상품을 session 장바구니(map)에 저장을 하고 cart-ok.jsp 페이지를 통해 장바구니 페이지를 갈지 안갈지를 정한다.
+ 			 </li>
+ 			 <li>장바구니 페이지를 들어가면 JSTL문 forEach문을 통해 session에 저장된 정보를 뷰에 뿌려주고 c:set을 통한 총합을 저장을하여 클라이언트에게 보여준다. 또한 장바구니 삭제 버튼을 만들어 클릭 시 그 클릭한 상품번호와 함께 deleteController을 가서 세션 유무를 체크 후 장바구니 session을 map에다가 저장을 하고 저장 된 map중 삭제 버튼을 누른 상품번호를 삭제를 한다.</li>
+ 		</ol>
+ 	</li>
+ </ol>
 </li>
 </ul>
