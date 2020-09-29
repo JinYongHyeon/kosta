@@ -197,7 +197,7 @@ html, javascript, css는 ${pageContext.request.contextPath}/를 명시해서 웹
 <li>20년09월21일 수업일지<hr>
 <ol>
 	<li>layout or login-layout.jsp : 템플릿을 만들어서 session을 통해 session이 존재하지 않을경우에는 layout으로 존재할 경우
-	login-layout으로 이동시켜 request.setAttribute으로 메인페이지  url을 설정을 하여 c:import 을 통해 메인페이지를 보여준다. 
+	login-layout으로 이동시켜 request.setAttribute으로 메인페이지  url을 설정을 하여 c:import 을 통해 메인페이지를 보여준다.
 	</li>
 </ol>
 </li>
@@ -216,7 +216,7 @@ html, javascript, css는 ${pageContext.request.contextPath}/를 명시해서 웹
  </ol>
 </li>
 <li>20년09월23일 수업일지<hr>
-	<ol>	
+	<ol>
 		<li>복합 기본키 : 복합기본키 (복합 primary key) 두 개 이상의 컬럼을 이용하여 primary key를 만드는 것을 말함. <br>사용법 : CONSTRAINT pk_mvc_shares PRIMARY KEY(customer_id,stock_id)</li>
 		<li>정규화 : 데이터 중복을 최소화하고 데이터의 무결성 및 안전성을 보장하기 위해 테이블을 분해하는 과정을 말한다.
 		<ol>
@@ -272,6 +272,12 @@ html, javascript, css는 ${pageContext.request.contextPath}/를 명시해서 웹
 </li>
 <li>20년09월25일 수업일지<hr>
 	<ol>
+    <li>Oracle row_number() over() : 조회된 ROW(행)에 대한 순차적인 번호를 제공하는 오라클 함수<br>
+    EX)SELECT ROW_NUMBER() OVER(ORDER BY COLUMN ASC OR DESC) AS 별칭 FROM TALBE_NAME
+    </li>
+    <li>Inline View : SQL문장에서 From절에 사용되는 subquery FROM절에 서브쿼리로 SELECT 되는 조회결과를 테이블처럼 사용<br>
+      EX)SELECT FROM(서브쿼리) 별칭
+      </li>
 		<li>게시판
 			<ol>
 				<li>게시물 등록 : 로그인세션이 존재하는 경우 게시물 등록이 보이고 폼으로 넘어가면 타이틀과 본문을 작성을 하고 등록을 하면 DAO에서는 SEQUENCE처리와 타이틀 본품 SYSDATE(현재시간) 세션 아이디를 통해 DB QUERY문 작업을 한다. </li>
