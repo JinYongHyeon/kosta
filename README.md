@@ -306,4 +306,68 @@ html, javascript, css는 ${pageContext.request.contextPath}/를 명시해서 웹
 		</li>
 	</ol>
 </li>
+<li>10월05일 수업일지<hr>
+	<ol>
+		<li>AJAX(Asynchronous Javascript & XML(비동기 통신)) : 비동기 통신의 주체는 Javascript와 XML(최근에는 JSON으로 대처)이다.</li>
+		<li>웹프로그래밍에 있어서 비동기 통신이란(AJAX 통신이란?) : 동기적 방식의 전체 페이지를 응답받는 것이 아니라 필요한 데이터만 응답받는 방식이다. 사용자는 페이지 변경없이 필요한 데이터만 응답받으므로 응답여부와 관계없이 작업을
+지속할 수 있다.</li>
+		<li>구조화된 데이터 응답을 위한 기술
+			<ol>
+				<li>XML -> 설정정보 역할과 데이터 전송 역할이 있다. (Ajax에서는 데이터 전송 역할을 의미한다)</li>
+				<li>JSON -> JavaScript Object Notation 구조화된 데이터 응답을 위한 기술</li>
+				<li>JSON : 경량의 데이터 교환 형식 Ajax 통신시 주로 사용되고 XML에 비해 가볍고 개발 생산성이 뛰어나다.</li>
+			</ol>
+		</li>
+		<li>서버에서 비동기 통신 응답시 구조화된 데이터로 응답하기 위해 초기에 XML을 많이 이용했고 
+최근에는 성능 및 개발 생산성이 좋은 JSON을 많이 사용한다.</li>
+		<li>XML( Extensible Markup Language) : 특수한 목적의 언어를 생성하고 로딩하여 사용하고자 할 때 쓰는 마크업 언어 주로 용도는 설정 정보 or 데이터 전송 용도가 있다. Ajax 통신에서는 데이터 전송용으로 XML을 이용한다.</li>
+		<li>jdom : java xml(데이터전송) 도와주는 라이브러리
+			<ol>
+				<li>Servlet부분</li>
+				<li>Document myDocument = new Document(); // XML생성</li>
+				<li>Element element = new Element("car"); //car태그 생성</li>
+				<li>myDocument.setRootElement(element); //XML안에 car태그 추가</li>
+				<li>element.addContent(내용); // car태그 안에 들어갈 내용</li> 
+				<li>XMLOutputter xmlOut = new XMLOutputter();//XML --> AJAX 보내기 위해 객체생성</li>
+				<li>out.println(xmlOut.outputString(myDocument));//XML --> 출력(AJAX)</li>
+				<li>JSP부분</li>
+				<li>var carView = xhr.responseXML.getElementsByTagName("car")//servlet에서 응답한 car 태그를 가져온다.</li>
+				<li>carVal[0].childNodes[0].childNodes[0].nodeValue; //model의 정보</li>
+			</ol>
+		</li>
+		<li>ajax javascript 사용법
+			<ol>
+				<li>xhr = new XMLHttpRequest();//ajax 통신을 위한 자바스크립트 객체</li>
+				<li>xhr.onreadystatechange = callback; or function(){} <-- 가상함수 // readystate가 변화될 때 호출(서버가 응답할 때 호출된다)</li>
+				<li>xhr.open("method[get,post]","url");</li>
+				<li>xhr.send(null); // post 방식일 때 사용 --> get방식 일 때 null로 보내줌</li>
+			</ol>
+		</li>
+	</ol>
+</li>
+<li>10월06일 수업일지 <hr>
+	<ol>
+		<li>JSON<ol>
+		<li>Servlet 부분</li>
+		<li>JSONObject json = new JSONObject(); // 하나의 정보를 담을 때 사용</li>
+		<li>json.put(name,value); or new JSONObject(VO); // 값을 담을 수 있다.</li>
+		<li>JSONArray jarr = new JSONArray(Collection); //JSON배열 담을 때 사용</li>
+		<li>JSON.parse(xhr.responseText);</li>
+		<li>JSP 부분</li>
+		<li>var json = JSON.parse(xhr.responseText); // 응답받은 정보를 json (javascript object) 으로 변환 </li>
+		<li>json.model // (VO = get 사용) or 배열 JSON 받을 때 json[0].model <-- for문 돌려서 사용 </li>
+		</ol>
+		<li>Jquery
+		<ol>
+			<li>jQuery의 ready 함수는 document 가 준비되는 시점에서 실행된다.jQuery(document).ready(function(){})
+			</li>
+			<li>jQuery와 $는 같은 표현 : 자바스크립트 객체를 jQuery 객체로 변환한다.</li>
+			<li>$(:button).on("click",function) -> (:button) jquery 필터로 선택, type=button을 선택해준다.</li>
+			<li>input 타입 값을 가져올 때는 val()을 사용하고 나머지 태그 값을 가져올때는 text() or html()을 사용한다. html()은 태그도 사용 할 수 있다.</li>
+		</ol>
+		</li>
+		</li>
+	</ol>
+		
+</li>
 </ul>
