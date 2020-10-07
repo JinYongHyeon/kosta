@@ -368,6 +368,10 @@ html, javascript, css는 ${pageContext.request.contextPath}/를 명시해서 웹
 		</li>
 		</li>
 	</ol>
-		
+</li>
+<li>10월07일 수업일지<hr>
+	<ol>
+		<li></li>
+	</ol>
 </li>
 </ul>
