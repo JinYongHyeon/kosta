@@ -393,4 +393,13 @@ html, javascript, css는 ${pageContext.request.contextPath}/를 명시해서 웹
 		</li>
 	</ol>
 </li>
+<li>10월27일 수업일지<hr>
+	<ol>
+		<li>DI[Dependency Lookup] 의존성 검색 : 필요로 하는 의존대상(객체 or bean)을 lookup검색을 통해 실현한다.</li>
+		<li>DL[Dependency Injection] 의존성 주입 : 필요로 하는 의존대상(객체 or bean)을 injection 주입을 통해 실현한다.</li>
+		<li>Spring config [~.xml] 파일에  bean태그 안에  preperty 태그에 name은 bean setter을 가리킨다. / ref 참조할 bean 가리킨다.<br>
+		constructor-arg는 생성자 매개변수를 가리키고 값을 넣을 때 생성자 매개변수 순서대로 값을 주입해주어야 한다.
+		</li>
+	</ol>
+</li>
 </ul>
