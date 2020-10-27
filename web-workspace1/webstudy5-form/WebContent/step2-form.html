@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>form 연동 테스트</title>
+<style>
+form {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #ffd3a1;
+	border: 5px solid #ff0000;
+	padding: 25px;
+}
+
+form input{
+width: 300px;
+	height: 25px;
+	margin-bottom: 5px;
+}
+
+form input[type=submit] {
+	width: 100%;
+	height: 50px;
+	margin-bottom:0;
+}
+
+form span{
+width:150px;
+float:left;
+}
+
+
+</style>
+<script type="text/javascript">
+	function passCheck(){
+		var flag = true
+		var pass = document.getElementById("pass");
+		var passCheck =  document.getElementById("memberPassCheck");
+		if(pass.value !== passCheck.value){
+			alert("패스워드가 확인란이 일치하지 않습니다.")
+			flag= false;
+		}
+		return flag;
+	}
+</script>
+</head>
+<body>
+	<!-- 
+	tool로 step2.LoginServlet을 만들고 (Deployment Descriptor : web.xml)
+	form method에 적합한 서블릿 메서드를 오버라이딩하여 사용자가 전송한
+	아이디와 패스워드를 출력한다.
+	
+	전송전에 패스워드와 패스워드확인란을 비교해서 내용이 다르면 alert()으로 패스워드 확인란이 일치하지 않습니다.
+	전송되지 않도록 한다.
+ -->
+	<form action="LoginServlet" method="post" onsubmit="return passCheck()">
+		<span>아아디</span>
+		<input type="text" name="memberId" required="required"placeholder="아이디 5글자 이상" minlength="5"><br> 
+			<span>패스워드</span>
+			<input type="password" id="pass" name="memberPass" required="required" placeholder="비밀번호"><br> 
+			<span>패스워드 확인</span>
+			<input type="password" id="memberPassCheck"name="memberPassCheck" required="required" placeholder="비밀번호"><br> 
+			<span>이메일</span>
+			<input type="email" name="memberEmail" required="required" placeholder="이메일을 입력하세요"><br> 
+			<input type="submit" value="로그인">
+
+	</form>
+</body>
+</html>

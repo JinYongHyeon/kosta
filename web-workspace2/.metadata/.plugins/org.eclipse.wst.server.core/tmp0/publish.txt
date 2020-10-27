@@ -1,0 +1,6 @@
+#Tomcat publish data
+#Fri Oct 02 18:54:40 KST 2020
+org.eclipse.jst.jee.server\:webstudy40-board-step5-paging=C\:\\apache-tomcat-8.5.57\\webapps\\webstudy40-board-step5-paging
+org.eclipse.jst.jee.server\:webstudy34-jstl-import-member=C\:\\apache-tomcat-8.5.57\\webapps\\webstudy34-jstl-import-member
+org.eclipse.jst.jee.server\:webstudy39-myboard=C\:\\apache-tomcat-8.5.57\\webapps\\webstudy39-myboard
+org.eclipse.jst.jee.server\:webstudy40-board-step4-update=C\:\\apache-tomcat-8.5.57\\webapps\\webstudy40-board-step4-update

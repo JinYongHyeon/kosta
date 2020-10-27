@@ -1,0 +1,19 @@
+**html-study.txt**
+참고 사이트 www.w3schools.com
+HTML : HyperText Markup Language(웹 문서의 화면 구성을 정의하는 언어)
+JavaScript : 웹 문서의 동작을 담당(최근에는 서버 사이드 프로그래밍도 지원)
+CSS : 웹 문서의 디자인 스타일을 담당
+XML : Extensible Markup Language
+ -주로 웹어플리케이션 or WAS 설정 정보를 명시할 때 사용 데이터 통신용으로도 사용되었지만 최근에는 JSON을 이용한다.
+
+<!DOCTYPE html> <!-- html 주석 : html5 버전 문서임을 명시하는 선언부 -->
+<html>
+	<head>
+		<!-- 본문 화면에는 표현되지 않고 현재 문서의 설정 정보를 저장 -->
+	</head>
+	<body>
+		<!-- 본문 화면의 디자인 구성 : 웹화면을 표현 -->
+		<br> <!-- 행 변경 -->
+		<img src=""/> <!-- 이미지 표현 -->
+	</body>
+</html>

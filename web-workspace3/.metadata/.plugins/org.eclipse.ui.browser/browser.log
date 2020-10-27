@@ -1,0 +1,8 @@
+
+10월 08, 2020 09:26:33.667 NEW SESSION
+10월 08, 2020 09:26:33.667 [1008/092633.655:ERROR:directory_reader_win.cc(43)] FindFirstFile: 지정된 경로를 찾을 수 없습니다. (0x3)
+10월 08, 2020 09:43:50.804 [1008/094350.803:ERROR:directory_reader_win.cc(43)] FindFirstFile: 지정된 경로를 찾을 수 없습니다. (0x3)
+10월 08, 2020 11:34:15.780 [1008/113415.780:ERROR:directory_reader_win.cc(43)] FindFirstFile: 지정된 경로를 찾을 수 없습니다. (0x3)
+10월 08, 2020 13:32:37.633 [5500:11080:1008/133237.632:ERROR:mcs_client.cc(755)] Received close command, resetting connection.
+10월 08, 2020 15:07:42.623 [5500:11080:1008/150742.623:ERROR:mcs_client.cc(755)] Received close command, resetting connection.
+10월 08, 2020 15:17:43.298 [5500:11080:1008/151743.297:ERROR:mcs_client.cc(755)] Received close command, resetting connection.

@@ -1,0 +1,23 @@
+package org.kosta.controller;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.kosta.model.BoardDAO;
+import org.kosta.model.PostVO;
+
+public class GetPostDetailController implements Controller {
+
+	@Override
+	public String execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		String no = request.getParameter("no");
+		if (request.getParameter("token") == null)
+		BoardDAO.getInstance().updatePostToken(no); // 2 조회수 증가 +1
+		PostVO pvo = BoardDAO.getInstance().getPostDetail(no); // 1 상세정보 가져오기
+		if(pvo== null)return ""
+		request.setAttribute("pvo", pvo);
+		request.setAttribute("url", "/board/board-detail.jsp");
+		return "template/layout.jsp";
+	}
+
+}

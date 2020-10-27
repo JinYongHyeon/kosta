@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>select</title>
+</head>
+<body>
+<!-- 
+	step4.OrderServlet
+	주문항목
+	두부김치 3인분(만약 3인분 이상이면 서비스 소주2명)
+	서비스 소주2병
+ -->
+<form action="OrderServlet" method="post">
+	<select name="menu">
+		<option value="두부김치">두부김치</option>
+		<option value="골뱅이">골뱅이</option>
+		<option value="삼겹살">삼겹살</option>
+		<option value="감자튀김">감자튀김</option>
+		<option value="곱창">곱창</option>
+		<option value="대창">대창</option>
+		<option value="홍합">홍합</option>
+		<option value="상합">상합</option>
+		<option value="치킨">치킨</option>
+	</select>
+	<input type="number" min="1" name="count">인분
+	<input type="submit" value="주문">
+</form>
+</body>
+</html>

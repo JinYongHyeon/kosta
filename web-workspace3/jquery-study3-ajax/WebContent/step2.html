@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(document).on("click","#ajaxBtn",function(){
+			$.ajax({
+				type:"post",
+				url:"CommentServlet",
+				data:"comment="+$("#comment").val(),
+				success:function(data){
+					//아래 div resultView에 정보를 보여준다.
+					//$("#resultView").text(data);
+					$("#resultView").html("<pre>"+data+"</pre>");
+				}
+			});
+		});
+	});//ready
+</script>
+</head>
+<body>
+	<textarea rows="10" cols="10" id="comment"></textarea>
+	<br>
+	<input type="button" id="ajaxBtn" value="ajax연동테스트">
+	<hr>
+	<div id="resultView"></div>
+</body>
+</html>
+
+
+
+

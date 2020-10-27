@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+
+<script type="text/javascript">
+	function checkboxCheck() {
+		var flag = false;
+
+		var movieCheck = document.getElementsByName("movie");
+
+		for (var i = 0; i < movieCheck.length; i++) {
+			if (movieCheck[i].checked) {
+				flag = true;
+				break;
+			}
+		}
+		if (!flag) {
+			alert("영화 항목을 선택하세요!" + flag);
+		}
+		return flag;
+	}
+
+	function chageAllState() {
+		var movieCheck = document.getElementsByName("movie");
+		var movieAllCheck = document.getElementById("allCheck");
+
+	
+			for (var i = 0; i < movieCheck.length; i++) {
+				movieCheck[i].checked = movieAllCheck.checked;
+			}
+		
+	}
+</script>
+<body>
+	<!-- 
+	step1. 선택항목을 보여준다
+	 	      선택한 영화 : 비밀의 숲 케넷 내부자들
+
+	step5.MovieServlet
+	String[] : getParameterValues(String name);
+	
+	step2. 선택한 항목이 없으면 영화를 선택하세요! 전송하지 않는다.
+	checked != true
+	
+	step3. 전체 선택을 누르면 영화전체가 선택되고 다시 누르면 영화전체가 해제된다.
+ -->
+
+
+	<form action="MovieServlet" method="post"
+		onsubmit="return checkboxCheck()">
+		<input type="checkbox" id="allCheck" onchange="chageAllState()">전체선택<br>
+		<input type="checkbox" name="movie" value="비밀의 숲">비밀의 숲<br>
+		<input type="checkbox" name="movie" value="케넷">케넷<br> <input
+			type="checkbox" name="movie" value="내부자들">내부자들<br> <input
+			type="submit" value="선택">
+
+	</form>
+</body>
+</html>

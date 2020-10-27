@@ -1,0 +1,60 @@
+**review**
+(Client Side Web 기술)
+-html : 웹 문서의 컨텐츠(구조, 구성요소)
+-javascript : 웹 문서의 행위 (동작) -> 최근에는 서버 사이드에서도 적용된다.
+-css : 웹 사이트의 디자인 스타일
+(Server Side Web 기술)
+-Servlet : java web application을 위한 기술(MVC에서 Controller(제어자)의 역할)
+
+
+WAS(Web Application Server) : Web Server + Web Container(or Servlet Container)
+Web Server : http 프로토콜에 의거해서 html 서비스
+Web Container : Servlet과 JSP 실행환경을 제공. (실행환경 : lib(tomcat, lifecycle)
+				Servlet을 개발하기 위한 라이브러리 제공 (Apache tomcat lib)
+				Servlet LifeCycle 관리
+				
+HTML Form
+<!-- action : 처리할 서버프로그램 url(web.xml) -
+	 html request 요청 방식 1)get 방식 : 정보 조회용(db select)
+	 					 2)post 방식 : 정보 전송용 (db insert,delete,update) url에 노출되지 않고 http request body에
+	 								   저장되어 전송. 서버의 상태 변경시에는 post으로 요청한다.
+-->
+
+	<form action="url-pattern" method="get or post">
+		<!--name 요소는 서버에 전송하기 위해 반드시 필요한 요소
+			userName=사용자입력정보&userAddr=사용자입력정보
+			ex) 
+			userName=홍길동&userAddr=용인 
+			//위 정보를 전송받는 서버(Servlet or JSP)는 request.getParameter(name) 
+										 ex) request.getParameter(userName)
+			
+			id는 자바스크립트에서 제어하기 위한 용도 document.getElementById(id) -> 하나의 컴포넌트 객체
+			참고) document.getElementsByName(name) -> 컴포넌트배열로 반환								 
+		-->
+		<input type="text" name="userName" id="userName2">
+		<input type="text" name="userAddr" id="userAddr2">
+	</form>
+	
+Sevlet LifeCycle : init(ServletConfig servletConfig) -> 개별 서블릿 초기화, 단 한번 실행
+				   service(request,response) -> doGet(request,response) or doPost(request,response)
+				    							클라이언트요청시마다 실행
+				   destroy() ->서블릿 객체가 해제되기 전에 한번 실행
+				   
+HelloServlet이 서비스되고 있다.
+  문제) HelloServlet을 1000명의 클라이언트가 서비스 받았다. 
+      1) HelloServlet 객체는 몇 개 생성? 1개 생성(인스턴스 초기화 및 생성자 실행 1번)
+      2) HelloServlet init()는 몇 번 실행? 1번 실행
+      3) service() -> doGet() or doPost()는 몇 번 실행? 1000번
+      4) destroy() -> WAS 종료(해당 서블릿이 메모리에서 해제되기 전)시 한번 실행
+      
+- ServletConfig : 개별 서블릿 당 하나 생성(init 메서드 실행시에 웹컨테이너가 할당)
+				    개별 서블릿이 서비스하는 데 필요한 초기 정보를 할당하는 용도 -> 서블릿 초기화에 필요 정보를 제공     
+				  ServletConfig는 ServletContext의 주소값을 가지고 있으므로 ServletConfig가 존재하는 객체(Servlet or JSP)
+				    만이 ServletContext를 사용할 수 있다.
+				    
+- ServletContext : 웹어플리케이션 당 하나 생성. ServletConfig를 가지는 서블릿과 JSP가 공유하는 객체
+				      주요 메서드) getInitParameter(name) -> web.xml(Deployment Descritor : 배포 기술서)에
+				      명시한 데이터(context-param)를 name에 의해 value를 반환 -> 코드와 데이터를 분리해서 유지보수성을 향상시키기 위해 사용
+				   
+				   setAttribute(name,value) -> 특정 정보를 공유하기 위해 사용
+				   getAttribute(name) -> 공유한 정보를 반환받기 위해 사용

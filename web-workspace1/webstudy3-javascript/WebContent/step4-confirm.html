@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>javascript confirm</title>
+<script type="text/javascript">
+	function enterHome(){
+		var age = confirm("당신은 성인이세요?");
+		if(age){
+			location.href="http://www.pororopark.com";
+		}else{
+			alert("나이 더 먹고 오세요!!");
+		}
+	}
+</script>
+</head>
+<body>
+	<input type="button" value="성인사이트입장하기" onclick="enterHome()">
+	<!-- 
+		위 버튼을 클릭하면 confirm 함수로 당신의 성인이세요?
+		확인 누르면 사이트로 이동 http://paroropark.com으로 이동
+		취소 누르면 나이 더 먹고 오세요 alert창
+	 -->
+</body>
+</html>

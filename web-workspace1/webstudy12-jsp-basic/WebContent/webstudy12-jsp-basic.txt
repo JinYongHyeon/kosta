@@ -1,0 +1,32 @@
+**jsp 기본 개념**
+
+JSP(Java Server Page) : 동적인 웹페이지 개발을 위한 기술. 
+					        서블릿과 다르게 HTML 페이지 상에서 자바코드를 삽입하는 형태로 개발.
+					    jsp는 web container에 의해 Servlet class로 생성된다.
+					        위치는 tomcat\work directory에 Servlet class가 저장된다.
+
+model 2 Architecture의 MVC 에서는 
+View : JSP
+Controller : Servlet
+Model : java component(Java Bean라고도 한다. / 자바 파일 모음)
+ 
+ -JSP 기본 무법
+  1) 주석 <%-- --%>
+  2) scriptlet : <% java code %> service계열 메서드내에 코드 삽입 (doGet(),doPost() <-- 선언되는 변수 지역변수
+  3) directive(지시자 ) : <%@ %>jsp 상단에 위치, 웹페이지의 정보를 컨테이너에게 알려줄 때 사용한다. ex) 문서타입,한글처리,import
+  4) expression : <%= %> service 계열 메서드내에 삽입되고 출력할 때 사용 / out.println(같음)
+  5) declaration(선언) : <%! %> 멤버 변수 또는 메서드 정의시 사용
+  
+  -JSP LifeCycle (Servlet과 동일 -> 차이점은 jsp가 .java로 내부적으로 생성)
+   						Web Container
+   client -- request --> is loaded? -- no --> .jsp  -> .java(생성) -> .class(컴파일)
+   							  |											 |
+   							  |										class loading
+   							  |											 |
+   							  |										     객체 생성
+   							  |											 |
+   							  |									      init()
+   							  |										     |
+   							 yes ----------------------------------> service()
+   							 
+   							 			destroy()

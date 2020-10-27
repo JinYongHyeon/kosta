@@ -1,0 +1,51 @@
+package org.kosta.model;
+
+public class PagingBean {
+	private int nowPage =1;
+	//페이지당 게시물 수 
+	private int postCountPerPage = 5;
+	//페이지 수 
+	private int postCountperPageGroup = 4;
+	
+	private int totalRow;
+	
+
+	public PagingBean(int totalRow) {
+		this.totalRow = totalRow;
+	}
+	
+	public PagingBean(int totalRow, int nowPage) {
+		this.totalRow = totalRow;
+		this.nowPage= nowPage;
+	}
+	
+	public int getPageStartRow() {
+		return (nowPage-1)*postCountPerPage+1;
+	}
+	
+	
+	public int getPageEndRow() {
+		return nowPage*postCountPerPage>totalPageRow?totalPageRow:nowPage*postCountPerPage;
+		
+	}
+	//총 페이지 
+	public int getTotalPage() {
+		return totalPageRow%postCountperPageGroup==0?totalPageRow/postCountperPageGroup:totalPageRow/postCountperPageGroup+1;
+	}
+	
+	public static void main(String[] args) {
+		PagingBean p = new PagingBean(47, 10);
+		  // 현페이지의 시작 row number 를 조회 46
+		  System.out.println("getBeginRowNumber:" + p.getPageStartRow());
+		  // 현페이지의 마지막 row number 를 조회 47
+		  System.out.println("getEndRowNumber:" + p.getPageEndRow());
+		  // 전체 페이지 수 : 10
+		  System.out.println("getTotalPage:" + p.getTotalPage());
+		  // 전체 페이지 그룹 수 : 3
+		  System.out.println("getTotalPageGroup:" + p.getTotalPageGroup());
+		  System.out.println("////////////////////////////");
+		
+	
+	
+	
+}

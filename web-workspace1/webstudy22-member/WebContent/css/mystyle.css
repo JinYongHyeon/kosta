@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+* {
+	margin: 0 auto;
+	padding: 0
+}
+
+table {
+	border-collapse: collapse;
+	text-align: center;
+}
+
+table, td, th {
+	border: 1px solid #000
+}
+
+td, th {
+	padding: 10px;
+	padding-left: 35px;
+	padding-right: 35px;
+}
+
+table tr td:nth-child(2){padding:0;}
+
+table tr td input{width:300px; height:50px; border:none;}
+
+
+
+.container {
+	width: 1400px;
+	position: relative;
+	padding-top: 30px;
+}
+
+a {
+	color: #000;
+	font-weight: bold;
+	font-size: 36px; text-decoration : none;
+	transition: 0.4s;
+	text-decoration: none;
+	padding:15px;
+}
+
+a:hover{
+	color:#0dbf90;
+	text-shadow:6px 6px #000;
+}
+

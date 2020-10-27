@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>javascript confirm</title>
+<script type="text/javascript">
+	function confirmTest(){
+		//alert("테스트")
+		//confirm 함수는 boolean 즉 true,false로 리턴한다.
+		var result = confirm("홍길동 당신의선택은?");
+		if(result){
+			alert("Yes을 선택했습니다.");
+		}else{
+			//alert("No을 선택했습니다.");
+			//다른 페이지로 이동시킨다.
+			location.href="http://www.naver.com"
+		}
+	}
+</script>
+</head>
+<body>
+<input type="button" value="테스트" onclick="confirmTest()">
+</body>
+</html>

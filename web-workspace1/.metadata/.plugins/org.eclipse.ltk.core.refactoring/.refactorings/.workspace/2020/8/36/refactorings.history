@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;webstudy-model2-FrontController&apos; to &apos;webstudy20-model2-FrontController&apos;" description="Rename resource &apos;webstudy-model2-FrontController&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/webstudy-model2-FrontController" name="webstudy20-model2-FrontController" stamp="1598843204609" updateReferences="true"/>
+</session>

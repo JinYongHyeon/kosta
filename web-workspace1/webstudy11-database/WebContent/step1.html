@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>step1 db 연동</title>
+<style>
+form {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform:translate(-50%,-50%);
+}
+
+form input[type=submit] {
+	width: 500px;
+	height: 500px;
+	background-color: #bff0a8;
+	border: none;
+	transition:0.4s;
+	cursor: pointer;
+	font-size:64px;
+	font-weight: bold;
+}
+
+form input[type=submit]:hover{
+	background-color:#a39eff;
+	
+	
+}
+
+</style>
+<script type="text/javascript">
+	var a = 1;
+	aaa();
+	function asd1(){
+	 //document.getElementById("myDIV").style.msTransform = "rotate(20deg)"; 
+	 if(a == 1){
+	 document.getElementById("asd").style.transform="rotateY(180deg)";
+	 document.getElementById("asd").style.background="#a39eff";
+	 a=0;
+	 }else{
+	 document.getElementById("asd").style.transform="rotateY(0deg)";
+	 document.getElementById("asd").style.background="#bff0a8";
+	 a=1;
+	 }
+	 aaa();
+	
+	}
+	
+	function aaa(){
+		setTimeout(asd1,1000);
+	}
+</script>
+</head>
+<body>
+	<form action="FindMemberCount">
+		<input type="submit" id="asd" value="조회">
+	</form>
+</body>
+</html>

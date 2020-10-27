@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>submit 연습</title>
+<script type="text/javascript">
+	function deposit() {
+		var money = document.getElementById("money");
+		var flag = false;
+		if (money.value.trim() == "") {
+			alert("금액을 입력해주세요;");
+		} else if (isNaN(money.value)) {
+			alert("숫자를 입력해주세요");
+			money.value = "";
+		} else {
+			if (confirm("입금을 하시겠습니까")) {
+				alert("입금이 완료되었습니다.")
+				flag = true;
+			} else {
+				money.value = "";
+			}
+		}
+		return flag;
+	}
+</script>
+</head>
+<body>
+	<form action="depositFrom" onsubmit="return deposit()">
+		금액 <input type="text" name="money" id="money"> <input
+			type="submit" value="입금하기">
+	</form>
+	<!-- 
+		입금하기 submit 버튼을 누르면 금액 부분이 공란이면 금액을 입력하세요 
+		금액이 공란이 아니지만 숫자가 아닐 경우(isNaN()) 숫자로 입력하세요! alert 후 정보를 지워준다.
+		위 두 경우는 submit 시키지 않는다.
+		위 두 경우가 아닌 경우에는 전송을 시키되 comfirm()을 이용해 확인을 누를 경우에만 전송 시킨다.
+		취소 누르면 전송되지 않는다
+	 -->
+</body>
+</html>

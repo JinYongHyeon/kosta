@@ -1,0 +1,39 @@
+
+9월 16, 2020 08:55:36.719 NEW SESSION
+9월 16, 2020 08:55:36.719 [4976:4424:0916/085536.718:ERROR:media_history_store.cc(363)] Failed to create or update the media history store.
+9월 16, 2020 09:10:05.175 [4976:8820:0916/091005.175:ERROR:CONSOLE(0)] "TypeError: Cannot read property 'isAnonymousInlineStyleSheet' of null", source:  (0)
+9월 16, 2020 09:10:13.71 [10600:10852:0916/091013.070:ERROR:media_history_store.cc(363)] Failed to create or update the media history store.
+9월 16, 2020 09:10:17.640 [10936:10540:0916/091017.640:ERROR:media_history_store.cc(363)] Failed to create or update the media history store.
+9월 16, 2020 11:35:52.980 [7736:9956:0916/113552.980:ERROR:media_history_store.cc(363)] Failed to create or update the media history store.
+
+9월 18, 2020 21:22:20.513 NEW SESSION
+9월 18, 2020 21:22:20.513 [11432:9004:0918/212220.513:ERROR:media_history_store.cc(363)] Failed to create or update the media history store.
+9월 18, 2020 21:24:51.258 [9148:5336:0918/212451.258:ERROR:media_history_store.cc(363)] Failed to create or update the media history store.
+
+10월 02, 2020 02:28:31.404 NEW SESSION
+10월 02, 2020 02:28:31.404 [8344:6844:1002/022831.402:ERROR:media_history_store.cc(363)] Failed to create or update the media history store.
+10월 02, 2020 02:28:37.794 [8344:9392:1002/022837.794:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+10월 02, 2020 02:29:06.270 [8344:9392:1002/022906.270:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+10월 02, 2020 02:30:00.467 [8344:9392:1002/023000.466:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+10월 02, 2020 02:31:48.191 [8344:9392:1002/023148.191:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+10월 02, 2020 02:35:15.497 [8344:9392:1002/023515.497:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+10월 02, 2020 02:42:36.533 [8344:9392:1002/024236.532:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+10월 02, 2020 02:52:36.544 [8344:9392:1002/025236.543:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+10월 02, 2020 03:02:36.547 [8344:9392:1002/030236.547:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+10월 02, 2020 03:04:15.381 [9064:3972:1002/030415.380:ERROR:media_history_store.cc(363)] Failed to create or update the media history store.
+10월 02, 2020 03:04:25.751 [9064:9724:1002/030425.751:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+10월 02, 2020 03:04:55.283 [9064:9724:1002/030455.283:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+10월 02, 2020 03:05:38.327 [9064:9724:1002/030538.326:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+10월 02, 2020 03:07:16.758 [9064:9724:1002/030716.757:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+10월 02, 2020 03:10:59.620 [9064:9724:1002/031059.620:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+
+10월 02, 2020 18:38:52.492 NEW SESSION
+10월 02, 2020 18:38:52.492 [4052:14068:1002/183852.490:ERROR:media_history_store.cc(363)] Failed to create or update the media history store.
+10월 02, 2020 18:38:59.390 [4052:768:1002/183859.389:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+10월 02, 2020 18:39:27.920 [4052:768:1002/183927.919:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+10월 02, 2020 18:40:17.870 [4052:768:1002/184017.869:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+10월 02, 2020 18:42:14.170 [10988:7680:1002/184214.169:ERROR:media_history_store.cc(363)] Failed to create or update the media history store.
+10월 02, 2020 18:42:35.470 [13912:13360:1002/184235.469:ERROR:media_history_store.cc(363)] Failed to create or update the media history store.
+10월 02, 2020 18:42:53.664 [2348:9304:1002/184253.664:ERROR:media_history_store.cc(363)] Failed to create or update the media history store.
+10월 02, 2020 18:42:58.932 [2348:5636:1002/184258.931:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -106
+10월 02, 2020 18:43:34.82 [10956:732:1002/184334.082:ERROR:media_history_store.cc(363)] Failed to create or update the media history store.

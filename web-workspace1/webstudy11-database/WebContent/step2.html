@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>id로 회원검색</title>
+<style type="text/css">
+div {
+	position: absolute;	top:50%;	left:50%;	transform:translate(-50%,-50%);
+}
+</style>
+</head>
+<body>
+	<!-- 
+	step3.findMemberByIdServlet
+	아이디에 해당하는 회원이 있으면
+	아이디 : java
+	이름 : 홍길동
+	주소 : 판교
+	
+	없으면
+	ㅁㅁ 아이디에 해당하는 회원정보가  없습니다.
+ -->
+	<form action="findMemberByIdServlet" method="get">
+		<span>아이디</span><input type="text" name="memberId" required="required"
+			placeholder="검색  할 아이디를 입력해주세요"> <br>
+		<input type="submit" value="검색">
+	</form>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Operator 연산자 테스트</title>
+<script type="text/javascript">
+	function test() {
+		var name1 = "홍길동";
+		var name2 = "홍길동 ";
+		//alert(name1==name2.trim());//trim()을 이용해 여백을 제거
+		//alert(name1.length);//3문자로 구성
+		//alert(name2.length);//여백을 포함해 4문자로 구성
+		//비교 연산자에는 ==(강제 형변환 포함), ===(엄격한 비교(타입까지 비교)) === 권장
+		var age1 = 21;
+		var age2 = "21";
+		//alert(age1 == age2)true(내부적으로 형변환) 
+		//alert(age1 === age2)//false 
+
+		var age3 = age2 + 1;
+		var age4 = age1 + 1;
+		//alert(age3); //211
+		//alert(age4); //22
+		//문자열 형태의 숫자일 경우에는 형변환
+		var age5 = parseInt(age2);//형변환해서 연산
+		alert(age1 === age5);
+	}
+</script>
+</head>
+<body>
+	<input type="button" value="연산테스트" onclick="test()">
+</body>
+</html>

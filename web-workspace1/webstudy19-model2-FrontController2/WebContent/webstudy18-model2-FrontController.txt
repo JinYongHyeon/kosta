@@ -1,0 +1,23 @@
+***Front Controller Pattern***
+기존 Model2 Architecture (MVC + Singleton) 에 FrontController Pattern을 추가 적용해본다
+
+Front Controller Pattern : 모든 클라이언트의 다양한 요청을 하나의 진입점으로 집중시켜 일과러적으로 처리하기 위한 디자인 패턴.
+  -사용자 요청 정보 수집 및 분석, 예외처리, 보안(인증 및 인가), 마케팅 적용 정책 등을 일관성 있게 처리할 수 있다.(실세계의 콜센터 역할)
+  
+  
+  기존 구조
+  				Controller 영역					Model영역
+  client --->  FindCarServlet      < ---- >   
+  			   RegisterCarServlet
+  			         .
+  			         .
+  			         .
+  			         
+FrontController Pattern 적용 후 (서블릿은 FrontController인 DispathcerServler 하나만 정의)
+				Controller 영역					Model영역
+  client --->  DispathcerServler   < ---- >
+	(Spring 프레임워크 사용할 떄 front이름이 Dispathcer)   
+  			   
+  			         
+  			         
+  			         

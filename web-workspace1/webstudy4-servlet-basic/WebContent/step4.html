@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ExamServlet</title>
+<style>
+form {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+form input[type=submit] {
+	width: 100%;
+	height: 50px;
+	text-align: center;
+	margin-top:5px;
+	background-color:#ebcf34;
+	border:none;
+	box-shadow:2px 2px 2px #000;
+	cursor:pointer;
+}
+
+form input[type=text]{
+	width:300px;
+	height:50px;
+	margin-left:15px;
+	margin-top:10px;
+}
+
+form span{
+	color:#fff;
+	font-weight: bold;
+}
+
+form{
+	border:5px solid #fff;
+	padding:15px;
+}
+
+</style>
+</head>
+<!-- required : 빈공간 방지 -->
+<body bgcolor="green">
+	<!-- 
+	step4.ExamServlet을 구현하여 web.xml에 설정 추가
+	아래 전송버튼을 누르면
+	이름 : 홍길동
+	별명 : 콩길동
+ -->
+	<form action="exam">
+		<span>이름</span><input type="text" name="userName" required="required" placeholder="이름을 입력해주세요"><br>
+		<span>별명</span><input type="text" name="userNick" required="required" placeholder="별명을 입력해주세요"><br>
+		<input type="submit" value="전송">
+	</form>
+</body>
+</html>

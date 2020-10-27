@@ -1,0 +1,4 @@
+#Tomcat publish data
+#Fri Oct 02 02:23:44 KST 2020
+org.eclipse.jst.jee.server\:webstudy23-product-date=C\:\\apache-tomcat-8.5.57\\webapps\\webstudy23-product-date
+org.eclipse.jst.jee.server\:webstudy22-member=C\:\\apache-tomcat-8.5.57\\webapps\\webstudy22-member

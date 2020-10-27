@@ -1,0 +1,53 @@
+**어노테이션 기반 설정**
+
+서블릿 3.0 이상에서 지원하는 기술
+
+ @WebServlet("/TestAnnotationServlet(url-pattern") : 어노테이션 기반 서블릿 설정
+  -> 서블릿 클래스 상단부에 명시하면 기존 web.xml의 url-pattern 설정과 동일한 효과를 가진다.
+  -> 어노테이션 기반 설정은 개발의 생산성을 위해 지원
+  -> 전역적인 설정 ex) SrvletContext의 context-param or session config 등은 web.xml에서 하고 개별 서블릿에 관련된 설정은
+    			      어노테이션 설정을 권장한다.
+    			      
+    			      
+ 
+ 
+ @WebListener  ==   <listener> (web.xml / 전역설정)
+   					  <listener-class>listener.ListListener</listener-class>
+  				    </listener>
+  				    
+  				    
+
+@WebServlet("/ts")  ==    <servlet> (web.xml)
+							    <description></description>
+							    <display-name>EnterServlet</display-name>
+							    <servlet-name>EnterServlet</servlet-name>
+							    <servlet-class>step1.EnterServlet</servlet-class>
+						  </servlet>
+						  <servlet-mapping>
+							    <servlet-name>EnterServlet</servlet-name>
+							    <url-pattern>/EnterServlet</url-pattern>
+						  </servlet-mapping>
+						  
+						  
+						  
+response.setContentType("text/html; charset=utf-8");
+		PrintWriter out = response.getWriter();
+		out.println("<html><body bgcolor=yellow>");
+		out.println(getServletConfig().getServletName());
+		out.println("</html></body>");
+		out.close();
+		
+**WEB Container(Servlet Container)**
+WAS(Web Application Server) -> Web Server + Web Container
+
+Web Container : Servlet,JSP 실행환경 제공 -> Servlet, JSP lib 제공
+									  -> Servlet Life Cycle 관리
+									  -> JSP를 Servlet 생성
+									  -> ServletContext(공유자원)와 ServletConfig 생성
+									  
+step2.FindMemberCountServlet을 최초로 실행할 때 web container 동작은 다음과 같다.
+1.Web Container는 자신의 설정 정보인 web.xml고 @WebServlet 어노테이션 정보를 로딩
+2.ServletContext를 생성(context-param 정보도 함께 할당)
+3.ServletContextListener를 implements 한 클래스(TestListener)가 있으면 contextInitialized()를 실행한다.
+ -이 떄 시스템에서 한번만 수행하면 되는 db driver loading를 실행시킨다.
+4.FindMemberCountServlet의 객체 생성 - init(ServletConfig) -> service() 계열 메소드(doGet,doPost()) 실행

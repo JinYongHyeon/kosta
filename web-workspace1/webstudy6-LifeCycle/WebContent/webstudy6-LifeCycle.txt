@@ -1,0 +1,88 @@
+**Servlet LifeCycle**
+
+-Servlet 계층구조(Servlet Hierarchy)
+
+<<interface>>
+Servlet : 모든 서블릿과 jsp가 하위로 implements 해야하는 java web program의 최상위 인터페이스 
+ 		    주요 추상메서드(abstract method) :init(), service(request,response), destory()가 있다.
+
+<<abstract>>
+GenericServlet : 프로토콜에 독립적인 클래스 service() 메서드 (abstract method)를 제외한 서버프로그램을 구현
+ 				  하는데 유용한 메서드들을 하위(지식) 클래스에게 제공한다. 
+ 				 (대표적인 메서드로는 init(), service(request,response) 등이 있다.)
+<<abstract>>
+HttpServlet : 부모인 GenericServlet을 상속받고 있으면 Http Protocol에 의거한 서비스하는 데 유용한 기능을 내장하고
+			    있다. 일반적으로 java web programming을 위한 프로그램(Servlet,JSP)을 만들 때 상속받는 클래스이다.
+			    대표적인 메서드 - service(request, response), doGet(request,response), 
+			  doPost(request,response)등이 있다.
+			  
+			  //아래 메서드는 웹컨테이너에 의해 호출되는 메서드 
+			  //이 메서드는 내부적으로 HttpServletRequest와 HttpServletResponse 객체를 생성해서 오버로딩된
+			  //protected service 메서드를 dispath(처리해 보낸다)한다.
+			  public void service(ServletRequest req,ServletResponse rep){}
+			 
+			  //클라이언트의 request method(요청방식)에 의거해 내부적으로 
+			  //doGet() or doPost() or doPut() or doDelete() 등으로 분기해 dispatch한다
+			  protected void service(HttpServletRequest req,HttpServletResponse rep){}
+			  
+MyServlet(개발자들이 만드는 서블릿) extends HttpServlet 한후
+ doGet(req,rep){} or doPost(req,rep){}를 오버라이딩한다.
+ 
+  -인터페이스(interface) : Collection Framework, JDBC, Servlet등의 응용기술이 인터페이스를 계층구조 상에
+      최상위로 두는 이유
+     -인터페이스(interface)와 구현클래스(implementation)를 구분해서 설계하면 결합도를 낮추어 유지보수성을 향상시킨다.
+     -인터페이스란 사용하는 측(일반사용자 or 프로그램 or 웹컨테이너 등)과 구현하는 측과의 약속(메세지 방식)이다.
+     -구현부가 변경되어도 사용하는 측에서는 사용법이 변경되지 않는다(낮은 결합도) -> 낮은 결합도로 유지보수성 향상
+     - 인터페이스 사용법만 알면 구현체(구현부)를 몰라도 사용할 수 있다. -> 사용자 편의성 또는 생산성(업무 분담을 통한 신속한 개발이 가능)
+     
+   내 생각)인터페이스는 확실히 유지보수 짱 상속으로 하면 안되냐 안되는 이유 상속은 일단 단일 상속이기도 하고 구현부가 바뀌면 사용자도 바뀌기 때문에
+       결합도 올라갑니다.
+     
+     interface 를 implements하는 하위 클래스들은 interface에서 명시한 abstract method를 반드시 구현해야 한다. 
+     (만약 구현하지 않으면 자신도 abstract class로 선언되어야 한다) -> 표준화(메세지 방식의 표준화를 의미) 
+          상위 인터페이스만 보고 사용이 가능 (ex - 유투브, cdplay 등...)
+     (ex - Collection interface만 이해하면 Set,List 계열의 자료구조체 사용가능)
+      
+     
+  -abstract class
+   -인터페이스와는 다르게 인스턴스 변수와 구현된 메서드(알고리즘)를 하위 클래스에게 제공 -> 재사용성 측면에서 장점
+    (but 인터페이스는 다양한 계층구조 형성 가능, 자바는 단일 상속)
+    
+    참고 )Encapsulation, Inheritance, Polymorphism (객체지향 주요개념)
+    
+  *****Servlet LifeCycle******
+    서블릿 생명주기의 주요 메서드로는 Servlet interface의 init(), service(), destory()가 있다.
+  Servlet LifeCycle은 Web Container(or Servlet Container or WAS)가 담당한다.
+    
+    서블릿JSP는 스레드 기반으로 동작하기 때문에 해당 서블릿 객체 한번 생성하고 서비스할때에는 한번 만든 서블릿 객체를 이용해 서비스한다.
+  service() 계열 메서드를 실행시킬 스레드만 다수 생성되어 실행된다.
+  
+   init(ServletConfig config) : 해당 서블릿의 초기화 작업을 위해 정의 <-- 초기화 작업이 뭘까? 차차 알아볼꺼임 ㅇㅅㅇ
+   							        서블릿 당 한번 실행 (back-up 자료 Load)
+   service(request,response) : 해당 서블릿이 사용자에게 서비스하기 위해 정의 doGet(), doPost()와 연결
+  							      클라이언트 요청시 마다 호출
+   destroy() : 해당 서블릿이 메모리에서 해제되기 직전에 호출 (back-up)
+   
+   ===============================================================================================
+   								WAS(Web Container)
+    browser -- request -- is loaded?(객체 생성) -- no  ------------   class loading  
+     							|								 |
+     							|						             객체 생성 
+     							|								 |
+     							|					  init(ServletConfig) -> call -> init()
+     							|								 |
+     						   yes -----------------------> service(request,response) -- doGet() or doPost
+     						   
+     						   		distory() : 해당 서블릿에 메모리에서 해제되기 직전 호출
+     							
+   ===============================================================================================
+  
+  
+   예) FindProductServlet에 접속해서 상품을 검색하는 사용자 요청이 1000번 FindProductServlet의 
+          객체 생성(웹컨테이너 담당해서 생성)은 몇번? 1번
+     init()은 몇번? 1번
+     service() -> doGet()은 몇번? 1000번
+       
+
+     
+  

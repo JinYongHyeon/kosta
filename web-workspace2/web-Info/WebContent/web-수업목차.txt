@@ -1,0 +1,26 @@
+**java web programming(Servlet&JSP) 주요목차**
+-Web Programming 환경설정
+-HTML 기초
+-CSS 기초
+-JavaScript 기초
+-Servlet 개념
+-기본 서블릿 구조
+-Form 과 연동 (client와 server 연동)
+-Servlet 계층구조의 이해
+-Servlet LifeCycle
+-ServletConfig과 ServletConfext
+-Database 연동
+-Cookie 와 Session
+-JSP 개념
+-JSP 기본 문법
+-JSP LifeCycle
+-JSP ActionTag(forward와redirect)
+-Model 1 Architecture(설계)
+-Model 2 Architecture(MVC Pattern 설계)
+-EL
+-JSTL
+-Model 2 심화(MVC + Front Controller Pattern)
+
+다음과정
+-JavaScript(XML + JSON)
+-AJAX

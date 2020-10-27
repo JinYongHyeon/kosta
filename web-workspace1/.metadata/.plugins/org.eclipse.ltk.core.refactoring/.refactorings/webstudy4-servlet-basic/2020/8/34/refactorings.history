@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;step3.PastServlet&apos; to &apos;PostServlet&apos;&#x0D;&#x0A;- Original project: &apos;webstudy4-servlet-basic&apos;&#x0D;&#x0A;- Original element: &apos;step3.PastServlet&apos;&#x0D;&#x0A;- Renamed element: &apos;step3.PostServlet&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;PastServlet&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;step3{PastServlet.java[PastServlet" matchStrategy="1" name="PostServlet" qualified="false" references="true" similarDeclarations="false" stamp="1597890824276" textual="false" version="1.0"/>
+</session>

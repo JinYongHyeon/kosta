@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Request,Response</title>
+</head>
+<body>
+<!-- action : 처리할 서버 프로그램 url(서버상에서는 web.xml에 설정)
+	 method : 따로 기술하지 않으면 defualt = get방식이 기본
+	 http://ip:port/serverProgramUrl?name=value 형태로 전송
+	 
+	 처리할 서버프로그램 : RequestResponseServlet -> url-pattern : rr(web.xml)
+ -->
+	<form action="rr">
+		이름 &nbsp;<input type="text" name="userName">
+		<input type="submit" value="서버로 전송">
+	</form>	
+<hr>
+<!-- 링크 방식으로 요청 : get 방식으로 요청-->
+<a href="rr?userName=javaKing">눌러봐</a>
+
+</body>
+</html>

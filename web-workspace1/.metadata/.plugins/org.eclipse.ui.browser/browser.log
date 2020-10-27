@@ -1,0 +1,20 @@
+
+8월 20, 2020 19:19:07.77 NEW SESSION
+8월 20, 2020 19:19:07.78 [2464:6860:0820/191907.074:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -106
+8월 20, 2020 19:19:07.82 [2464:6860:0820/191907.079:ERROR:registration_request.cc(246)] Registration URL fetching failed.
+8월 20, 2020 19:19:07.83 [2464:6860:0820/191907.080:ERROR:registration_request.cc(246)] Registration URL fetching failed.
+8월 20, 2020 19:19:07.84 [2464:6860:0820/191907.080:ERROR:registration_request.cc(246)] Registration URL fetching failed.
+8월 20, 2020 19:19:07.277 [2464:6860:0820/191907.276:ERROR:registration_request.cc(246)] Registration URL fetching failed.
+8월 20, 2020 19:19:27.937 [2464:6860:0820/191927.936:ERROR:registration_request.cc(246)] Registration URL fetching failed.
+8월 20, 2020 19:19:31.372 [2464:6860:0820/191931.371:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -106
+8월 20, 2020 19:19:34.139 [2464:6860:0820/191934.138:ERROR:registration_request.cc(246)] Registration URL fetching failed.
+8월 20, 2020 19:19:34.544 [2464:6860:0820/191934.543:ERROR:registration_request.cc(246)] Registration URL fetching failed.
+8월 20, 2020 19:19:35.459 [2464:6860:0820/191935.459:ERROR:registration_request.cc(246)] Registration URL fetching failed.
+8월 20, 2020 19:20:10.483 [2464:6860:0820/192010.482:ERROR:registration_request.cc(246)] Registration URL fetching failed.
+8월 20, 2020 19:20:14.784 [2464:6860:0820/192014.784:ERROR:connection_factory_impl.cc(420)] Failed to connect to MCS endpoint with error -106
+8월 20, 2020 19:20:19.303 [2464:6860:0820/192019.302:ERROR:registration_request.cc(246)] Registration URL fetching failed.
+8월 20, 2020 19:20:19.601 [2464:6860:0820/192019.601:ERROR:registration_request.cc(246)] Registration URL fetching failed.
+8월 20, 2020 19:20:20.778 [2464:6860:0820/192020.777:ERROR:registration_request.cc(246)] Registration URL fetching failed.
+
+10월 02, 2020 02:23:47.721 NEW SESSION
+10월 02, 2020 02:23:47.721 [14536:10364:1002/022347.719:ERROR:media_history_store.cc(363)] Failed to create or update the media history store.

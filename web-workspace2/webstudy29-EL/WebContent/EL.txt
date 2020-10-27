@@ -1,0 +1,25 @@
+**EL**
+- JSP 버전이 상향되면서 추가된 스크립트 언어 
+-기존 Script tag의 표현식( <%=정보%> ) Tag에서 업그레이드된 버전 &{정보}
+-주요특징 jsp 속성영역(request,session,application(ServletContext) 등)에 저장된 객체의 property를 출력
+ 다양한 연산이 가능 JSTL과 연동이 가능하다.
+-기존 방식의 예)
+ 	<% MemberVO vo = (MemberVO) request.getAttribute("vo");%>
+ 	<%=vo.getId()%>
+  EL 방식의 예)
+    ${requestScope.mvo.name} or ${mvo.name} // requestScope 생략가능(내부적으로 탐색함)
+    
+    MemberVO mvo = (MemberVO) request.getAttribute("vo");
+    mvo.getName()
+  
+ JSP 내장객체 종류
+  -pageContext : 다른 내장객체를 생성하는 역할 // Context -- > 환경설정
+  -pageScope  : JSP가 서블릿으로 변환되었을 때 Servlet 객체 자신(this)
+  -requestScope : request 객체에 접근하기 위한 역할
+  -sessionScope : session 객체에 접근하기 위한 역할
+  -applicationScope : application 객체 (ServletContext 객체) 객체에 접근하기 위한 역할
+  
+ EL 에서 파라미터 제어
+  - param : request.getParameter();
+  - paramValues : request.getParameterValues(); 
+  -

@@ -1,0 +1,4 @@
+#Tomcat publish data
+#Mon Oct 12 12:43:33 KST 2020
+org.eclipse.jst.jee.server\:jquery-study3-ajax=C\:\\apache-tomcat-8.5.57\\webapps\\jquery-study3-ajax
+org.eclipse.jst.jee.server\:jquery-study4-model2=C\:\\apache-tomcat-8.5.57\\webapps\\jquery-study4-model2
