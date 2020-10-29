@@ -402,4 +402,25 @@ html, javascript, css는 ${pageContext.request.contextPath}/를 명시해서 웹
 		</li>
 	</ol>
 </li>
+<li>10월28일 수업일지<hr>
+	<ol>
+		<li>AOP설정
+			<ol>
+				<li>횡단관심사항을 정의한 bean</li>
+				<li>pointcut : 횡단관심사항 적용 대상을 지정</li>
+				<li>aop:pointcut expression="execution(public * model.*Service.*(..))" id="pt" 설명</li>
+				<li>public : method 접근 제어자</li>
+				<li>* : 리턴 타입(모든 리턴 타입이 적용 대상)</li>
+				<li>model. : model 팩키지 이하 or org.kosta.model.. : .. 하위 팩키지 모두 포함 </li> 
+				<li>*Service : Service로 끝나는 인터페이스 또는 클래스</li>
+				<li>* : 모든 메서드명이 적용 대상(만약 find 계열만을 대상으로 지정한다면 find*)</li>
+				<li>(..) : 매개변수 : 매개변수 0~*</li>
+				<li> advice : 횡단관심사항 서비스가 어느 시점에 적용될 것인가를 지정[after : 메서드 실행 완료 후 적용됨.]</li>
+			</ol>
+		</li>
+		<li> AOP를 적용하지 않으면 각 서비스 클래스의 모든 메서드에 직접 코딩을 해야 한다.</li>
+		<li>AOP를 적용하면 시스템을 핵심관심사항과 횡단관련사항으로 구분하여 공통된 작업(추가요구사항)은 별도의 모듈에서
+	        기능을 정의한 후 대상과 시점을 지정하여 생산성있게 개발할 수 있다.</li>
+	</ol>
+</li>
 </ul>
