@@ -371,25 +371,24 @@ html, javascript, css는 ${pageContext.request.contextPath}/를 명시해서 웹
 </li>
 <li>10월26일 수업일지<hr>
 	<ol>
-		<li>IOC(Inversion Of Control) : 제어의 역행, 제어의 반전, 역제어<ol>
+		<li>IOC(Inversion Of Control) : 제어의 역행, 제어의 반전, 역제어</li>
+		<ol>
 		<li>의존 대상을 필요로 할 때 기존 제어 방식 즉 생성하는 것이 아니라 IOC 컨테이너로부터 의존 대상을 확보하는 방식으로 시스템을 구축하는 것을 말한다.</li>
 		<li>Spring IOC Container(ApplicationContext)를 이용해 스프링 설정 파일 ~.xml을 시스템 시작시에 읽어서 필요 객체를 생성한 후 어플리케이션에서
-		bean id를 요청하면 생성한 객체를 반환해 준다.
-		</li>
-			<li>효과<ol>
-				<li>낮은 결합도와 높은 응집도에 기여</li>
-				<li>결합도가 낮아진다는 표현은 의존 대상 변경시 기존 제어방식은 객체생성 및 확보 부분의 소스코드 수정이 불가피하나 IOC 적용시에는 상위 인터페이스 타입으로
-				관리되고 IOC 컨테이너에 의해 객체가 확보되므로 기존 소스코드 수정을 최소화하여 관리할 수 있다.
-				</li>
+		bean id를 요청하면 생성한 객체를 반환해 준다.</li>
+		<li>효과</li>
+				<ol>
+					<li>낮은 결합도와 높은 응집도에 기여</li>
+					<li>결합도가 낮아진다는 표현은 의존 대상 변경시 기존 제어방식은 객체생성 및 확보 부분의 소스코드 수정이 불가피하나 IOC 적용시에는 상위 인터페이스 타입으로
+					관리되고 IOC 컨테이너에 의해 객체가 확보되므로 기존 소스코드 수정을 최소화하여 관리할 수 있다.
+					</li>
 				</ol>
-			</li>
-		</ol>
-		 </li>
-		<li>Maven으로 의존성관리[Dependency Management] : 어플리케이션이 필요한 많은 라이브러리를 일관적으로 관리 pom.xml에서 설정한다.
+			</ol>
+		<li>Maven으로 의존성관리[Dependency Management] : 어플리케이션이 필요한 많은 라이브러리를 일관적으로 관리 pom.xml에서 설정한다.</li>
 			<ol>
 			<li>Maven url : http://mvnrepository.com/ 라이브러리 가져옴</li>
 			<li>pom.xml에 project 태그 끝 지점 위에 dependencies태그 생성해서 <dependencies> 안에 라이브러리 추가 </dependencies></li>
-			</oi>
+			</ol>
 		</li>
 	</ol>
 </li>
@@ -436,4 +435,18 @@ html, javascript, css는 ${pageContext.request.contextPath}/를 명시해서 웹
 		<li>MyBatis(jdbc FrameWork) : DataSource에 대한 설정 및 SQL정의는 xml에 대한 매핑을 하고 spring과 연동시에는 spring 설정에서 DataSource(dbcp)를 정의한다</li>
 	</ol>
 </li>
+<li>10월30일 수업일지<hr>
+	<ol>
+		<li>MyBatis mapper sql문에서 parameterType 값이 하나 일때는 명시하지 않아도 된다. 명시 할 경우 #{value} 관례적으로 자주 사용한다.</li>
+		<li>spring과 mybatis 연동해서 사용 할 경우 쓰는 라이브러리[Maven에 정의]</li>
+		<ol>
+			<li>spring-context [IOC lib]</li>
+			<li>commons-dbcp2 [database conntection pool lib]</li>
+			<li>mybatis [영속성 계층 framework]</li>
+			<li>spring과 mybatis 연동하기 위한 API</li>
+			<li>spring-jdbc [transaction lib] 제어</li>
+		</ol>
+	</ol>
+</li>
 </ul>
+
