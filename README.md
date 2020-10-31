@@ -411,7 +411,7 @@ html, javascript, css는 ${pageContext.request.contextPath}/를 명시해서 웹
 				<li>aop:pointcut expression="execution(public * model.*Service.*(..))" id="pt" 설명</li>
 				<li>public : method 접근 제어자</li>
 				<li>* : 리턴 타입(모든 리턴 타입이 적용 대상)</li>
-				<li>model. : model 팩키지 이하 or org.kosta.model.. : .. 하위 팩키지 모두 포함 </li> 
+				<li>model. : model 팩키지 이하 or org.kosta.model.. : .. 모든하위 팩키지 모두 포함 </li> 
 				<li>*Service : Service로 끝나는 인터페이스 또는 클래스</li>
 				<li>* : 모든 메서드명이 적용 대상(만약 find 계열만을 대상으로 지정한다면 find*)</li>
 				<li>(..) : 매개변수 : 매개변수 0~*</li>
