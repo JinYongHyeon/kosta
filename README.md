@@ -423,4 +423,17 @@ html, javascript, css는 ${pageContext.request.contextPath}/를 명시해서 웹
 	        기능을 정의한 후 대상과 시점을 지정하여 생산성있게 개발할 수 있다.</li>
 	</ol>
 </li>
+<li>10월29일 수업일지<hr>
+	<ol>
+		<li>proxy패턴 : 예를 A()메소드가 존재 할 때 내부적으로 proxy가 만들어지고 A()메소드를 참조하여 대리로 역할을 수행을 한다. proxy는 기능을 추가로 전달을 할 수 있다.[AOP로 가능] -- 현실 EX)팬(클라이언트)<-->연예인(구현체)과 매니저(인터페이스)</li>
+		<li>SpringAOP Around : before, after, after-returning, after-throwing 네가지 advice(시점)를 모두 처리할 수 있다.
+			<ol>
+				<li>ProceedingJoinPoint.proceed() : 실제 대상(타켓 메서드)을 실행</li>
+				<li>ProceedingJoinPoint.after-returning : 대상 메서드의 리턴값을 제어</li>
+				<li>ProceedingJoinPoint.after-throwing : 대상 메서드의 예외 및 에러를 제어</li>
+			</ol>
+		</li>
+		<li>MyBatis(jdbc FrameWork) : DataSource에 대한 설정 및 SQL정의는 xml에 대한 매핑을 하고 spring과 연동시에는 spring 설정에서 DataSource(dbcp)를 정의한다</li>
+	</ol>
+</li>
 </ul>
